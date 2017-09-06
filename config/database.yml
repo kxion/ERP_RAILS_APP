@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  pool: 5
+
+development:
+  <<: *default
+  database: erp2
+  username: postgres
+  password: postgres
+
+staging:
+  database: erp1
+
+production:
+  database: erp1
+
+test:
+  database: erp1

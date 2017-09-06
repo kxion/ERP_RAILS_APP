@@ -1,0 +1,23 @@
+<% @page_title = "Shopify Connect" %>
+<% @body_classes << "" %>
+
+<h1>Connect Shopify</h1>
+
+<%= form_tag do %>
+    <div class="light-container">
+      <p>Please input Shop Name to proceed</p>
+
+      <div class="input-form">
+        <div class="row">
+          <%= label_tag :shop_name, "Shop URL" %>
+          <div class="field">
+            <%= text_field_tag 'shop_name', '', :required => true, :style => "width: 200px;" %>
+            .myshopify.com
+          </div>
+        </div>
+
+        <%= submit_tag 'Connect', :class => 'btn btn-primary' %>
+        <%= link_to 'Cancel', connected_accounts_path, :class => 'btn' %>
+      </div>
+    </div>
+<% end %>

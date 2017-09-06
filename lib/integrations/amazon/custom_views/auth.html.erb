@@ -1,0 +1,24 @@
+<h1>Connect Amazon account</h1>
+
+<%= form_tag do %>
+    <div class='light-container'>
+
+      <div class='input-form'>
+        <div class='row'>
+          <%= label_tag :merchant_id, 'Amazon Seller ID' %>
+          <div class='field'>
+            <%= text_field_tag :merchant_id, '', required: true, style: 'width: 200px;' %>
+          </div>
+        </div>
+        <div class='row'>
+          <%= label_tag :auth_token, 'Amazon MWC Auth Token' %>
+          <div class='field'>
+            <%= text_field_tag :auth_token, '', required: true, style: 'width: 200px;' %>
+          </div>
+        </div>
+
+        <%= submit_tag 'Connect', class: 'btn btn-primary' %>
+        <%= link_to 'Cancel', connected_accounts_path, class: 'btn' %>
+      </div>
+    </div>
+<% end %>

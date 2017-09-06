@@ -1,0 +1,11 @@
+development:
+  key: dy5lox3g7hgom43zq341wuua
+  secret: ktftw0gbwz
+
+staging:
+  key: dy5lox3g7hgom43zq341wuua
+  secret: ktftw0gbwz
+
+production:
+  key: dy5lox3g7hgom43zq341wuua
+  secret: ktftw0gbwz
