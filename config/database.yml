@@ -14,7 +14,10 @@ staging:
   database: erp1
 
 production:
+  <<: *default
   database: erp1
+  username: postgres
+  password: postgres
 
 test:
   database: erp1
