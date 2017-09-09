@@ -21,7 +21,7 @@ class Users::ConfirmationsController < Devise::ConfirmationsController
     if Rails.env.development?
       redirect_to "http://localhost:3000/"
     else
-      redirect_to "https://erp-clarabyte.herokuapp.com/"
+      redirect_to "https://erb-angular-app.herokuapp.com/"
     end
   end
 

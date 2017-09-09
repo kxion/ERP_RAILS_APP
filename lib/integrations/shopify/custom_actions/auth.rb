@@ -22,10 +22,10 @@ module Integrations::Shopify::CustomActions
       account.is_connected = true
       account.save()
       flash[:notice] = 'Shopify account connected successfully'
-      redirect_to "https://erp-clarabyte.herokuapp.com/order-management/connected-accounts"
+      redirect_to "https://erb-angular-app.herokuapp.com/order-management/connected-accounts"
     rescue
       flash[:alert] = 'There was an error connecting your Shopify account'
-      redirect_to "https://erp-clarabyte.herokuapp.com/order-management/connected-accounts"
+      redirect_to "https://erb-angular-app.herokuapp.com/order-management/connected-accounts"
     end
   end
 end
