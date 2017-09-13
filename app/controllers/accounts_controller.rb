@@ -2,6 +2,8 @@ class AccountsController < ApplicationController
   before_action :set_account, only: [:show, :update, :disconnect_account, :connect_account]
 
   def get_accounts
+     p 'current_user'
+     p current_user
     render status: 200, json: { accounts: current_user.accounts }
   end
 

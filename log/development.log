@@ -669,3 +669,584 @@ Did you mean?  get_accounts):
   Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
   Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
   Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (102.7ms)
+  [1m[36mUser Load (59.5ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+
+
+Started OPTIONS "/customers.json" for 192.168.0.69 at 2017-09-13 14:42:19 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (27.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started OPTIONS "/users/get_users.json?token=karthick@yopmail.com" for 192.168.0.69 at 2017-09-13 14:42:19 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/get_users.json?token=karthick@yopmail.com" for 192.168.0.69 at 2017-09-13 14:42:20 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#get_users as JSON
+  Parameters: {"token"=>"karthick@yopmail.com"}
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `Sales?' for nil:NilClass):
+  app/models/user.rb:79:in `sales_staff_users'
+  app/controllers/users_controller.rb:16:in `get_users'
+
+
+  Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.2ms)
+
+
+Started GET "/customers.json" for 192.168.0.69 at 2017-09-13 14:42:20 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CustomersController#index as JSON
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/controllers/customers_controller.rb:9:in `index'
+
+
+  Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.8ms)
+
+
+Started OPTIONS "/contacts.json" for 192.168.0.69 at 2017-09-13 14:42:35 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started OPTIONS "/customers/get_customers.json?token=karthick@yopmail.com" for 192.168.0.69 at 2017-09-13 14:42:35 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/contacts.json" for 192.168.0.69 at 2017-09-13 14:42:36 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ContactsController#index as JSON
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/controllers/contacts_controller.rb:9:in `index'
+
+
+  Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.9ms)
+
+
+Started GET "/customers/get_customers.json?token=karthick@yopmail.com" for 192.168.0.69 at 2017-09-13 14:42:36 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CustomersController#get_customers as JSON
+  Parameters: {"token"=>"karthick@yopmail.com"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/models/user.rb:66:in `sales_customers'
+  app/controllers/customers_controller.rb:43:in `get_customers'
+
+
+  Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.4ms)
+
+
+Started OPTIONS "/accounts/get_accounts.json" for 192.168.0.69 at 2017-09-13 14:42:48 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started OPTIONS "/accounts/get_marketplaces.json" for 192.168.0.69 at 2017-09-13 14:42:48 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/accounts/get_accounts.json" for 192.168.0.69 at 2017-09-13 14:42:48 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#get_accounts as JSON
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `accounts' for nil:NilClass):
+  app/controllers/accounts_controller.rb:5:in `get_accounts'
+
+
+  Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.3ms)
+
+
+Started GET "/accounts/get_marketplaces.json" for 192.168.0.69 at 2017-09-13 14:42:48 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#get_marketplaces as JSON
+  [1m[35mMarketplace Load (40.9ms)[0m  SELECT "marketplaces".* FROM "marketplaces"
+Completed 200 OK in 60ms (Views: 7.6ms | ActiveRecord: 43.4ms)
+
+
+Started OPTIONS "/accounts/get_accounts.json" for 192.168.0.69 at 2017-09-13 14:42:59 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/accounts/get_marketplaces.json" for 192.168.0.69 at 2017-09-13 14:42:59 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#get_marketplaces as JSON
+  [1m[36mMarketplace Load (1.7ms)[0m  [1mSELECT "marketplaces".* FROM "marketplaces"[0m
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/accounts/get_accounts.json" for 192.168.0.69 at 2017-09-13 14:42:59 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#get_accounts as JSON
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `accounts' for nil:NilClass):
+  app/controllers/accounts_controller.rb:5:in `get_accounts'
+
+
+  Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.3ms)
+
+
+Started OPTIONS "/accounts/get_accounts.json" for 192.168.0.69 at 2017-09-13 14:45:12 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/accounts/get_marketplaces.json" for 192.168.0.69 at 2017-09-13 14:45:13 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#get_marketplaces as JSON
+  [1m[35mMarketplace Load (0.4ms)[0m  SELECT "marketplaces".* FROM "marketplaces"
+Completed 200 OK in 15ms (Views: 8.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/accounts/get_accounts.json" for 192.168.0.69 at 2017-09-13 14:45:13 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#get_accounts as JSON
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `accounts' for nil:NilClass):
+  app/controllers/accounts_controller.rb:7:in `get_accounts'
+
+
+  Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.1ms)
+
+
+Started OPTIONS "/users/logout" for 192.168.0.69 at 2017-09-13 14:45:26 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/logout" for 192.168.0.69 at 2017-09-13 14:45:26 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#logout as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started OPTIONS "/users.json" for 192.168.0.69 at 2017-09-13 14:45:39 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users.json" for 192.168.0.69 at 2017-09-13 14:45:39 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"karthick@yopmail.com", "password"=>"[FILTERED]", "remember_me"=>false}}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "karthick@yopmail.com"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (15.6ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "current_sign_in_ip" = $3, "sign_in_count" = $4, "updated_at" = $5 WHERE "users"."id" = $6[0m  [["last_sign_in_at", "2017-09-08 05:47:00.946387"], ["current_sign_in_at", "2017-09-13 09:15:40.280314"], ["current_sign_in_ip", "192.168.0.69/32"], ["sign_in_count", 7], ["updated_at", "2017-09-13 09:15:40.281607"], ["id", 2]]
+  [1m[35m (94.7ms)[0m  COMMIT
+Completed 200 OK in 447ms (Views: 0.3ms | ActiveRecord: 113.1ms)
+
+
+Started OPTIONS "/customers.json" for 192.168.0.69 at 2017-09-13 14:45:40 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started OPTIONS "/users/get_users.json?token=karthick@yopmail.com" for 192.168.0.69 at 2017-09-13 14:45:40 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/customers.json" for 192.168.0.69 at 2017-09-13 14:45:41 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CustomersController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCustomer Load (37.5ms)[0m  SELECT "customers".* FROM "customers" WHERE (customers.sales_user_id = 2) AND (is_active = 't')
+Completed 200 OK in 59ms (Views: 0.2ms | ActiveRecord: 38.6ms)
+
+
+Started GET "/users/get_users.json?token=karthick@yopmail.com" for 192.168.0.69 at 2017-09-13 14:45:42 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#get_users as JSON
+  Parameters: {"token"=>"karthick@yopmail.com"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE (id IN (2))
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.5ms)
+
+
+Started OPTIONS "/accounts/get_accounts.json" for 192.168.0.69 at 2017-09-13 14:45:53 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/accounts/get_marketplaces.json" for 192.168.0.69 at 2017-09-13 14:45:53 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#get_marketplaces as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mMarketplace Load (0.4ms)[0m  SELECT "marketplaces".* FROM "marketplaces"
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/accounts/get_accounts.json" for 192.168.0.69 at 2017-09-13 14:45:53 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#get_accounts as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mAccount Load (114.9ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."user_id" = $1  [["user_id", 2]]
+Completed 200 OK in 243ms (Views: 13.0ms | ActiveRecord: 131.9ms)
+
+
+Started OPTIONS "/integration/4/connect" for 192.168.0.69 at 2017-09-13 14:46:04 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/integration/4/connect" for 192.168.0.69 at 2017-09-13 14:46:04 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IntegrationCustomActionsController#auth_connect as HTML
+  Parameters: {"id"=>7, "account_id"=>"4", "integration_custom_action"=>{"id"=>7, "account_id"=>"4"}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."user_id" = $1 AND "accounts"."id" = $2  ORDER BY "accounts"."id" ASC LIMIT 1  [["user_id", 2], ["id", 7]]
+  [1m[36mMarketplace Load (0.5ms)[0m  [1mSELECT  "marketplaces".* FROM "marketplaces" WHERE "marketplaces"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 1516ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/customers.json" for 192.168.0.69 at 2017-09-13 14:48:08 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CustomersController#index as JSON
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCustomer Load (0.9ms)[0m  [1mSELECT "customers".* FROM "customers" WHERE (customers.sales_user_id = 2) AND (is_active = 't')[0m
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/get_users.json?token=karthick@yopmail.com" for 192.168.0.69 at 2017-09-13 14:48:08 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#get_users as JSON
+  Parameters: {"token"=>"karthick@yopmail.com"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE (id IN (2))[0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/accounts/get_accounts.json" for 192.168.0.69 at 2017-09-13 14:48:31 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#get_accounts as JSON
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."user_id" = $1[0m  [["user_id", 2]]
+Completed 200 OK in 7ms (Views: 3.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/accounts/get_marketplaces.json" for 192.168.0.69 at 2017-09-13 14:48:31 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#get_marketplaces as JSON
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mMarketplace Load (0.3ms)[0m  [1mSELECT "marketplaces".* FROM "marketplaces"[0m
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/accounts/get_marketplaces.json" for 192.168.0.69 at 2017-09-13 15:10:58 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#get_marketplaces as JSON
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mMarketplace Load (0.8ms)[0m  [1mSELECT "marketplaces".* FROM "marketplaces"[0m
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/accounts/get_accounts.json" for 192.168.0.69 at 2017-09-13 15:10:58 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#get_accounts as JSON
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."user_id" = $1[0m  [["user_id", 2]]
+Completed 200 OK in 10ms (Views: 3.3ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/integration/4/connect" for 192.168.0.69 at 2017-09-13 15:15:37 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IntegrationCustomActionsController#auth_connect as HTML
+  Parameters: {"id"=>5, "account_id"=>"4", "integration_custom_action"=>{"id"=>5, "account_id"=>"4"}}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mAccount Load (0.9ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."user_id" = $1 AND "accounts"."id" = $2  ORDER BY "accounts"."id" ASC LIMIT 1[0m  [["user_id", 2], ["id", 5]]
+  [1m[35mMarketplace Load (0.4ms)[0m  SELECT  "marketplaces".* FROM "marketplaces" WHERE "marketplaces"."id" = $1 LIMIT 1  [["id", 1]]
+Redirected to https://www.etsy.com/oauth/signin?oauth_consumer_key=dy5lox3g7hgom43zq341wuua&oauth_token=694f74e768c49f890879ef0c7f3ad3&service=v2_prod
+Completed 302 Found in 2167ms (ActiveRecord: 2.3ms)
+
+
+Started OPTIONS "/integration/4/connect" for 192.168.0.69 at 2017-09-13 15:15:42 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/integration/4/connect" for 192.168.0.69 at 2017-09-13 15:15:42 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IntegrationCustomActionsController#auth_connect as HTML
+  Parameters: {"id"=>7, "account_id"=>"4", "integration_custom_action"=>{"id"=>7, "account_id"=>"4"}}
+  [1m[36mUser Load (3.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mAccount Load (0.4ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."user_id" = $1 AND "accounts"."id" = $2  ORDER BY "accounts"."id" ASC LIMIT 1  [["user_id", 2], ["id", 7]]
+  [1m[36mMarketplace Load (0.3ms)[0m  [1mSELECT  "marketplaces".* FROM "marketplaces" WHERE "marketplaces"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 1185ms (Views: 0.3ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/accounts/get_marketplaces.json" for 192.168.0.69 at 2017-09-13 15:17:18 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#get_marketplaces as JSON
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mMarketplace Load (2.9ms)[0m  [1mSELECT "marketplaces".* FROM "marketplaces"[0m
+Completed 200 OK in 13ms (Views: 7.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/accounts/get_accounts.json" for 192.168.0.69 at 2017-09-13 15:17:18 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#get_accounts as JSON
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mAccount Load (1.7ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."user_id" = $1[0m  [["user_id", 2]]
+Completed 200 OK in 10ms (Views: 2.6ms | ActiveRecord: 2.2ms)
+
+
+Started OPTIONS "/accounts/get_accounts.json" for 192.168.0.69 at 2017-09-13 15:18:33 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started OPTIONS "/accounts/get_marketplaces.json" for 192.168.0.69 at 2017-09-13 15:18:33 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/accounts/get_accounts.json" for 192.168.0.69 at 2017-09-13 15:18:33 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#get_accounts as JSON
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `accounts' for nil:NilClass):
+  app/controllers/accounts_controller.rb:7:in `get_accounts'
+
+
+  Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/php01/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.1ms)
+
+
+Started GET "/accounts/get_marketplaces.json" for 192.168.0.69 at 2017-09-13 15:18:33 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#get_marketplaces as JSON
+  [1m[35mMarketplace Load (0.4ms)[0m  SELECT "marketplaces".* FROM "marketplaces"
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.4ms)
+
+
+Started OPTIONS "/users.json" for 192.168.0.69 at 2017-09-13 15:18:56 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users.json" for 192.168.0.69 at 2017-09-13 15:18:56 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"karthick@yopmail.com", "password"=>"[FILTERED]", "remember_me"=>false}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "karthick@yopmail.com"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "sign_in_count" = $4, "updated_at" = $5 WHERE "users"."id" = $6[0m  [["last_sign_in_at", "2017-09-13 09:15:40.280314"], ["current_sign_in_at", "2017-09-13 09:48:56.773297"], ["last_sign_in_ip", "192.168.0.69/32"], ["sign_in_count", 8], ["updated_at", "2017-09-13 09:48:56.774479"], ["id", 2]]
+  [1m[35m (19.9ms)[0m  COMMIT
+Completed 200 OK in 175ms (Views: 0.3ms | ActiveRecord: 20.8ms)
+
+
+Started OPTIONS "/users/get_users.json?token=karthick@yopmail.com" for 192.168.0.69 at 2017-09-13 15:18:56 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started OPTIONS "/customers.json" for 192.168.0.69 at 2017-09-13 15:18:56 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/get_users.json?token=karthick@yopmail.com" for 192.168.0.69 at 2017-09-13 15:18:57 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#get_users as JSON
+  Parameters: {"token"=>"karthick@yopmail.com"}
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE (id IN (2))
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/customers.json" for 192.168.0.69 at 2017-09-13 15:18:57 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CustomersController#index as JSON
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCustomer Load (1.1ms)[0m  SELECT "customers".* FROM "customers" WHERE (customers.sales_user_id = 2) AND (is_active = 't')
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/accounts/get_accounts.json" for 192.168.0.69 at 2017-09-13 15:19:04 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#get_accounts as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mAccount Load (1.7ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."user_id" = $1  [["user_id", 2]]
+Completed 200 OK in 10ms (Views: 5.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/accounts/get_marketplaces.json" for 192.168.0.69 at 2017-09-13 15:19:04 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#get_marketplaces as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mMarketplace Load (0.3ms)[0m  SELECT "marketplaces".* FROM "marketplaces"
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.7ms)
+
+
+Started OPTIONS "/integration/4/connect" for 192.168.0.69 at 2017-09-13 15:19:07 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/integration/4/connect" for 192.168.0.69 at 2017-09-13 15:19:07 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IntegrationCustomActionsController#auth_connect as HTML
+  Parameters: {"id"=>5, "account_id"=>"4", "integration_custom_action"=>{"id"=>5, "account_id"=>"4"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mAccount Load (0.4ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."user_id" = $1 AND "accounts"."id" = $2  ORDER BY "accounts"."id" ASC LIMIT 1  [["user_id", 2], ["id", 5]]
+  [1m[36mMarketplace Load (0.3ms)[0m  [1mSELECT  "marketplaces".* FROM "marketplaces" WHERE "marketplaces"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Redirected to https://www.etsy.com/oauth/signin?oauth_consumer_key=dy5lox3g7hgom43zq341wuua&oauth_token=e708d8d2a4e3901945a4e0b91cb500&service=v2_prod
+Completed 302 Found in 1826ms (ActiveRecord: 1.0ms)
+
+
+Started POST "/integration/4/connect" for 192.168.0.69 at 2017-09-13 15:19:16 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IntegrationCustomActionsController#auth_connect as HTML
+  Parameters: {"id"=>5, "account_id"=>"4", "integration_custom_action"=>{"id"=>5, "account_id"=>"4"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."user_id" = $1 AND "accounts"."id" = $2  ORDER BY "accounts"."id" ASC LIMIT 1[0m  [["user_id", 2], ["id", 5]]
+  [1m[35mMarketplace Load (0.4ms)[0m  SELECT  "marketplaces".* FROM "marketplaces" WHERE "marketplaces"."id" = $1 LIMIT 1  [["id", 1]]
+Redirected to https://www.etsy.com/oauth/signin?oauth_consumer_key=dy5lox3g7hgom43zq341wuua&oauth_token=2b2f03751b0f688f740571804acbfc&service=v2_prod
+Completed 302 Found in 1662ms (ActiveRecord: 1.1ms)
+
+
+Started POST "/integration/4/connect" for 192.168.0.69 at 2017-09-13 15:19:49 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IntegrationCustomActionsController#auth_connect as HTML
+  Parameters: {"id"=>5, "account_id"=>"4", "integration_custom_action"=>{"id"=>5, "account_id"=>"4"}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mAccount Load (1.5ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."user_id" = $1 AND "accounts"."id" = $2  ORDER BY "accounts"."id" ASC LIMIT 1  [["user_id", 2], ["id", 5]]
+  [1m[36mMarketplace Load (0.9ms)[0m  [1mSELECT  "marketplaces".* FROM "marketplaces" WHERE "marketplaces"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Redirected to https://www.etsy.com/oauth/signin?oauth_consumer_key=dy5lox3g7hgom43zq341wuua&oauth_token=540a150002a8376a99f67e40d79007&service=v2_prod
+Completed 302 Found in 1561ms (ActiveRecord: 2.9ms)
+
+
+Started POST "/integration/4/connect" for 192.168.0.69 at 2017-09-13 15:23:22 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IntegrationCustomActionsController#auth_connect as HTML
+  Parameters: {"id"=>7, "account_id"=>"4", "integration_custom_action"=>{"id"=>7, "account_id"=>"4"}}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."user_id" = $1 AND "accounts"."id" = $2  ORDER BY "accounts"."id" ASC LIMIT 1[0m  [["user_id", 2], ["id", 7]]
+  [1m[35mMarketplace Load (0.4ms)[0m  SELECT  "marketplaces".* FROM "marketplaces" WHERE "marketplaces"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 1337ms (Views: 0.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/accounts/get_accounts.json" for 192.168.0.69 at 2017-09-13 15:23:44 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#get_accounts as JSON
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mAccount Load (2.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."user_id" = $1  [["user_id", 2]]
+Completed 200 OK in 12ms (Views: 3.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/accounts/get_marketplaces.json" for 192.168.0.69 at 2017-09-13 15:23:44 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#get_marketplaces as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mMarketplace Load (0.5ms)[0m  SELECT "marketplaces".* FROM "marketplaces"
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/accounts/get_marketplaces.json" for 192.168.0.69 at 2017-09-13 15:33:27 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#get_marketplaces as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mMarketplace Load (1.0ms)[0m  SELECT "marketplaces".* FROM "marketplaces"
+Completed 200 OK in 37ms (Views: 6.5ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/accounts/get_accounts.json" for 192.168.0.69 at 2017-09-13 15:33:27 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#get_accounts as JSON
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mAccount Load (0.3ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."user_id" = $1  [["user_id", 2]]
+Completed 200 OK in 44ms (Views: 23.0ms | ActiveRecord: 3.8ms)
+
+
+Started POST "/integration/4/connect" for 192.168.0.69 at 2017-09-13 15:33:41 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IntegrationCustomActionsController#auth_connect as HTML
+  Parameters: {"id"=>5, "account_id"=>"4", "integration_custom_action"=>{"id"=>5, "account_id"=>"4"}}
+  [1m[36mUser Load (3.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."user_id" = $1 AND "accounts"."id" = $2  ORDER BY "accounts"."id" ASC LIMIT 1  [["user_id", 2], ["id", 5]]
+  [1m[36mMarketplace Load (0.3ms)[0m  [1mSELECT  "marketplaces".* FROM "marketplaces" WHERE "marketplaces"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 1763ms (Views: 0.3ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/accounts/get_marketplaces.json" for 192.168.0.69 at 2017-09-13 15:45:45 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#get_marketplaces as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mMarketplace Load (0.3ms)[0m  [1mSELECT "marketplaces".* FROM "marketplaces"[0m
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/accounts/get_accounts.json" for 192.168.0.69 at 2017-09-13 15:45:45 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#get_accounts as JSON
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."user_id" = $1[0m  [["user_id", 2]]
+Completed 200 OK in 9ms (Views: 3.2ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/integration/4/connect" for 192.168.0.69 at 2017-09-13 15:45:51 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IntegrationCustomActionsController#auth_connect as HTML
+  Parameters: {"id"=>5, "account_id"=>"4", "integration_custom_action"=>{"id"=>5, "account_id"=>"4"}}
+  [1m[35mUser Load (1.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."user_id" = $1 AND "accounts"."id" = $2  ORDER BY "accounts"."id" ASC LIMIT 1[0m  [["user_id", 2], ["id", 5]]
+  [1m[35mMarketplace Load (0.2ms)[0m  SELECT  "marketplaces".* FROM "marketplaces" WHERE "marketplaces"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 1486ms (Views: 0.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/accounts/get_accounts.json" for 192.168.0.69 at 2017-09-13 15:46:38 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#get_accounts as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mAccount Load (1.0ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."user_id" = $1  [["user_id", 2]]
+Completed 200 OK in 7ms (Views: 3.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/accounts/get_marketplaces.json" for 192.168.0.69 at 2017-09-13 15:46:38 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#get_marketplaces as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mMarketplace Load (0.4ms)[0m  SELECT "marketplaces".* FROM "marketplaces"
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/integration/4/connect" for 192.168.0.69 at 2017-09-13 15:49:55 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IntegrationCustomActionsController#auth_connect as HTML
+  Parameters: {"id"=>5, "account_id"=>"4", "integration_custom_action"=>{"id"=>5, "account_id"=>"4"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mAccount Load (0.5ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."user_id" = $1 AND "accounts"."id" = $2  ORDER BY "accounts"."id" ASC LIMIT 1  [["user_id", 2], ["id", 5]]
+  [1m[36mMarketplace Load (0.2ms)[0m  [1mSELECT  "marketplaces".* FROM "marketplaces" WHERE "marketplaces"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 2041ms (Views: 0.3ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/accounts/get_accounts.json" for 192.168.0.69 at 2017-09-13 15:50:04 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#get_accounts as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."user_id" = $1[0m  [["user_id", 2]]
+Completed 200 OK in 19ms (Views: 14.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/accounts/get_marketplaces.json" for 192.168.0.69 at 2017-09-13 15:50:04 +0530
+Cannot render console from 192.168.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#get_marketplaces as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mMarketplace Load (0.3ms)[0m  [1mSELECT "marketplaces".* FROM "marketplaces"[0m
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.6ms)
