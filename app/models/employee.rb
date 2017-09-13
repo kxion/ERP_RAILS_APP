@@ -69,7 +69,7 @@ class Employee < ActiveRecord::Base
       created_by:self.creator.try(:full_name),
       updated_at:self.updated_at.strftime('%d %B, %Y'),
       updated_by:self.updater.try(:full_name),
-      photo:"https://erp-rails.herokuapp.com#{self.photo.url}",
+      photo:"https://erp-rails-app.herokuapp.com#{self.photo.url}",
       timeclocks: self.timeclocks.with_active.get_json_timeclocks,
       expenses: self.expenses.with_active.get_json_expenses,
       payrolls: self.payrolls.with_active.get_json_payrolls,

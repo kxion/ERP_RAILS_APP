@@ -78,8 +78,8 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  Rails.application.routes.default_url_options = { host: 'https://erp-rails.herokuapp.com' }
-  config.action_mailer.default_url_options = { host: 'https://erp-rails.herokuapp.com' }
+  Rails.application.routes.default_url_options = { host: 'https://erp-rails-app.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'https://erp-rails-app.herokuapp.com' }
   config.action_mailer.smtp_settings = {
     :address              => "smtp.gmail.com",
     :port                 => 587,
