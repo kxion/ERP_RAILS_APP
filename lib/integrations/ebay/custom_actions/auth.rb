@@ -21,7 +21,7 @@ module Integrations
           account.is_connected = true
           account.save()
           flash[:notice] = 'Shopify account connected successfully'
-          redirect_to "https://erb-angular-app.herokuapp.com/order-management/connected-accounts"
+          redirect_to "https://erb-angular-app.herokuapp.com/#/order-management/connected-accounts"
         rescue
           flash[:alert] = "There was an error connecting your eBay account"
           redirect_to redirect_url_on_failure
