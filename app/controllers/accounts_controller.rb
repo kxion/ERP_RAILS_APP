@@ -1,5 +1,5 @@
 class AccountsController < ApplicationController
-  before_action :set_account, only: [:show, :update, :disconnect_account, :connect_account]
+  before_action :set_contact, only: [:show, :update, :disconnect_account, :connect_account]
 
   def get_accounts
      p 'current_user'

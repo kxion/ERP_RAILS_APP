@@ -80,7 +80,7 @@ Rails.application.routes.draw do
     end
     resources :accounts do
       collection do
-        get 'disconnect_account'
+        post 'disconnect_account'
         get 'connect_account'
         get 'get_accounts'
         get 'get_marketplaces'
