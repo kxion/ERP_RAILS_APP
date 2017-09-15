@@ -1,11 +1,11 @@
 development:
-  key: dy5lox3g7hgom43zq341wuua
-  secret: ktftw0gbwz
+  key: n0eo4imqxpr4q4knmmz0pxi0
+  secret: 43dp9f5elw
 
 staging:
-  key: dy5lox3g7hgom43zq341wuua
-  secret: ktftw0gbwz
+  key: n0eo4imqxpr4q4knmmz0pxi0
+  secret: 43dp9f5elw
 
 production:
-  key: dy5lox3g7hgom43zq341wuua
-  secret: ktftw0gbwz
+  key: n0eo4imqxpr4q4knmmz0pxi0
+  secret: 43dp9f5elw
