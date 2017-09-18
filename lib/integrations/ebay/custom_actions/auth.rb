@@ -4,10 +4,11 @@ module Integrations
       module Auth
 
         def auth_connect
-          session_id = Integrations::Ebay::Api::Base.call(:GetSessionID, { RuName: 'Core_Automotive-CoreAuto-df73-4-huchtfv' }).session_id
+          session_id = Integrations::Ebay::Api::Base.call(:GetSessionID, { RuName: 'james_james-jamesjam-myapp--zdghtmp' }).session_id
           puts session_id.inspect
           session[:integration_session] = (session[:integration_session] || {}).merge(session_id: session_id)
           redirect_to = Integrations::Ebay::Api::Base.authorization_uri(session_id).to_s
+          p redirect_to
           render status: 200, json: { url: redirect_to}
         end
 
@@ -21,6 +22,7 @@ module Integrations
           account.is_connected = true
           account.save()
           flash[:notice] = 'Shopify account connected successfully'
+          # redirect_to "http://localhost:8080/#/order-management/connected-accounts"
           redirect_to "https://erb-angular-app.herokuapp.com/#/order-management/connected-accounts"
         rescue
           flash[:alert] = "There was an error connecting your eBay account"

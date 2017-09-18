@@ -4,19 +4,19 @@ module Integrations
       module Configuration
 
         def dev_id
-          '6876a00f-97d4-4dc9-b2db-da216f2b84f4' if Rails.env.development? || Rails.env.production? || Rails.env.staging?
+          'f7960b98-7552-4572-bcdc-a32471e8fb66' if Rails.env.development? || Rails.env.production? || Rails.env.staging?
         end
 
         def app_id
-          'CoreAuto-df73-4a63-a2fa-4ee210c6cbb6' if Rails.env.development? || Rails.env.production? || Rails.env.staging?
+          'jamesjam-myapp-SBX-d2442a3e5-f3c4bc10' if Rails.env.development? || Rails.env.production? || Rails.env.staging?
         end
 
         def cert_id
-          '2fa035b8-8fa4-4e1a-996f-7aca47187407' if Rails.env.development? || Rails.env.production? || Rails.env.staging?
+          'SBX-2442a3e55857-c437-4a67-af9e-8d28' if Rails.env.development? || Rails.env.production? || Rails.env.staging?
         end
 
         def ru_name
-          'Core_Automotive-CoreAuto-df73-4-huchtfv' if Rails.env.development? || Rails.env.production? || Rails.env.staging?
+          'james_james-jamesjam-myapp--zdghtmp' if Rails.env.development? || Rails.env.production? || Rails.env.staging?
         end
 
       end

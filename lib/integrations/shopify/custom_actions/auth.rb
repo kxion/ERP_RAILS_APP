@@ -21,11 +21,11 @@ module Integrations::Shopify::CustomActions
       p permission_url = shopify_session.create_permission_url(scope)
       # p @state[:access_token] = shopify_session.request_token(params)
       flash[:notice] = 'Shopify account connected successfully'
-      # redirect_to "http://localhost:8080/#/order-management/connected-accounts?success"
+      # redirect_to "http://localhost:8080/#/order-management/connected-accounts"
       redirect_to "https://erb-angular-app.herokuapp.com/#/order-management/connected-accounts"
     rescue
       flash[:alert] = 'There was an error connecting your Shopify account'
-      # redirect_to "http://localhost:8080/#/order-management/connected-accounts?reject"
+      # redirect_to "http://localhost:8080/#/order-management/connected-accounts"
       redirect_to "https://erb-angular-app.herokuapp.com/#/order-management/connected-accounts"
     end
   end
