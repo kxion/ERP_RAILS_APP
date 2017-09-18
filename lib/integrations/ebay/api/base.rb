@@ -22,7 +22,7 @@ module Integrations
 
         # Determines whether to use the eBay sandbox or the real site.
         mattr_accessor :sandbox
-        self.sandbox = Rails.env.development? || Rails.env.staging?
+        self.sandbox = Rails.env.development? || Rails.env.production? || Rails.env.staging?
 
         # Set to true to generate fancier objects for responses (will decrease performance).
         mattr_accessor :normalize_responses
