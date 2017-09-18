@@ -3,9 +3,9 @@ development:
   secret: e0cba0c8570f8db0e4679affb8b24d3f
 
 staging:
-  api_key: e369ecf9e523b68a31b38f1b8f5d7ef5
-  secret: c5dba4c9d208f96d22267d420aacbbff
+  api_key: 7e493d2e780aa8c02e09b34b64744a8b
+  secret: e0cba0c8570f8db0e4679affb8b24d3f
 
 production:
-  api_key: e369ecf9e523b68a31b38f1b8f5d7ef5
-  secret: c5dba4c9d208f96d22267d420aacbbff
+  api_key: 7e493d2e780aa8c02e09b34b64744a8b
+  secret: e0cba0c8570f8db0e4679affb8b24d3f
