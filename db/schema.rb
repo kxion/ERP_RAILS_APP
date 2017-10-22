@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170527065330) do
+ActiveRecord::Schema.define(version: 20171020172339) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -213,6 +213,27 @@ ActiveRecord::Schema.define(version: 20170527065330) do
     t.datetime "updated_at",                   null: false
   end
 
+  create_table "inventory_items", force: :cascade do |t|
+    t.string   "icc"
+    t.string   "serial"
+    t.string   "make"
+    t.string   "model"
+    t.integer  "item_category_id"
+    t.integer  "item_source_id"
+    t.string   "status"
+    t.string   "location"
+    t.text     "notes"
+    t.decimal  "acquisition_cost",            precision: 16
+    t.decimal  "cached_profit_share_percent", precision: 8
+    t.text     "details"
+    t.boolean  "archived"
+    t.string   "check_value"
+    t.string   "item_category_name"
+    t.integer  "listing_id"
+    t.datetime "created_at",                                 null: false
+    t.datetime "updated_at",                                 null: false
+  end
+
   create_table "invoices", force: :cascade do |t|
     t.integer  "customer_user_id"
     t.integer  "contact_user_id"
@@ -253,11 +274,26 @@ ActiveRecord::Schema.define(version: 20170527065330) do
     t.datetime "updated_at",                                                       null: false
   end
 
+  create_table "item_categories", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "parent_category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "item_images", force: :cascade do |t|
     t.integer  "item_id"
     t.string   "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "item_sources", force: :cascade do |t|
+    t.string   "name"
+    t.string   "short_name"
+    t.decimal  "profit_share_percent", precision: 8, scale: 2
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
   end
 
   create_table "items", force: :cascade do |t|
@@ -322,6 +358,20 @@ ActiveRecord::Schema.define(version: 20170527065330) do
     t.integer  "updated_by_id"
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
+  end
+
+  create_table "listings", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "item_category_id"
+    t.string   "title"
+    t.string   "make"
+    t.string   "model"
+    t.text     "description"
+    t.integer  "shipping_preset_id"
+    t.datetime "publish_on"
+    t.decimal  "cost",               precision: 16, scale: 4
+    t.datetime "created_at",                                  null: false
+    t.datetime "updated_at",                                  null: false
   end
 
   create_table "maintanance_schedules", force: :cascade do |t|
@@ -630,6 +680,7 @@ ActiveRecord::Schema.define(version: 20170527065330) do
     t.string   "unconfirmed_email"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
+    t.boolean  "is_admin"
   end
 
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree

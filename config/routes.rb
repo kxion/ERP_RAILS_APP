@@ -188,6 +188,28 @@ Rails.application.routes.draw do
     end
     resources :cash_flow_reports , only: [:index]
 
+    # inventory_management
+    # get
+    post '/get_inventory_item' => 'inventory_management#get_inventory_item'
+    post '/get_listing' => 'inventory_management#get_listing'
+    post '/get_item_source' => 'inventory_management#get_item_source'
+    post '/get_item_category' => 'inventory_management#get_item_category'
+    # create
+    post '/create_inventory_item' => 'inventory_management#create_inventory_item'
+    post '/create_listing' => 'inventory_management#create_listing'
+    post '/create_item_source' => 'inventory_management#create_item_source'
+    # show
+    post '/show_inventory_item' => 'inventory_management#show_inventory_item'
+    post '/show_listing' => 'inventory_management#show_listing'
+    post '/show_item_source' => 'inventory_management#show_item_source'
+    # edit
+    post '/edit_inventory_item' => 'inventory_management#edit_inventory_item'
+    post '/edit_listing' => 'inventory_management#edit_listing'
+    post '/edit_item_source' => 'inventory_management#edit_item_source'
+    # delete
+    post '/delete_inventory_item' => 'inventory_management#delete_inventory_item'
+    post '/delete_listing' => 'inventory_management#delete_listing'
+    post '/delete_item_source' => 'inventory_management#delete_item_source'
 
     
     # default integration custom actions paths

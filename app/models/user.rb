@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
 
   #Has Many Relationship
   has_many :accounts
+  has_many :listings
 
   #Devise Setting
   devise :database_authenticatable, :registerable,:confirmable,
@@ -39,7 +40,8 @@ class User < ActiveRecord::Base
   end
 
   def admin?
-    self.role == 'Admin'
+    # self.role == 'Admin'
+    self.is_admin == true
   end
 
   def Sales?
