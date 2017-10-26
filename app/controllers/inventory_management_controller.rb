@@ -1,5 +1,4 @@
 class InventoryManagementController < ApplicationController
-	# before_action :set_delete_all, only: [:delete_inventory_item, :delete_listing, :delete_item_source]
 	def get_inventory_item
 		if params[:user_id].present?
 			@user = User.find_by(id: params[:user_id])
@@ -22,7 +21,7 @@ class InventoryManagementController < ApplicationController
 				@inventory_item.save
 				render :json=> {:status => true,:message => "Inventory Item created!"}, :status=>200
 			else
-     			render :json=> {:status => false,:message => "Current user not a admin User!"}, :status=>201
+     		render :json=> {:status => false,:message => "Current user not a admin User!"}, :status=>201
 			end
 		else
      	render :json=> {:status => false,:message => "Something Went Wrong!"}, :status=>201
@@ -62,11 +61,15 @@ class InventoryManagementController < ApplicationController
 		if params[:user_id].present?
 			@user = User.find_by(id: params[:user_id])
 			if @user.is_admin?
-				# @inventory_item_ids.each do |id|
-					@inventory_item = InventoryItem.find(params[:inventory_item_id])
-					@inventory_item.delete
-				# end
-				render :json=> {:status => true,:message => "Inventory Item deleted!"}, :status=>200
+				if params[:inventory_item_id].present?
+					params[:inventory_item_id].each do |id|
+						@inventory_item = InventoryItem.find(id)
+						@inventory_item.delete
+					end
+					render :json=> {:status => true,:message => "Inventory Item deleted!"}, :status=>200
+				else
+					render :json=> {:status => true,:message => "There is no Inventory Item!"}, :status=>200
+				end
 			else
      		render :json=> {:status => false,:message => "Current user not a admin User!"}, :status=>201
 			end
@@ -132,12 +135,11 @@ class InventoryManagementController < ApplicationController
 	def delete_listing
 		if params[:user_id].present?
 			@user = User.find_by(id: params[:user_id])
-			@listing = Listing.find(params[:listing_id])
-			if @listing.present?
-				# @listing_ids.each do |id|
-					# @listing = Listing.find(params[:listing_id])
+			if params[:listing_id].present?
+				params[:listing_id].each do |id|
+					@listing = Listing.find(id)
 					@listing.delete
-				# end
+				end
 				render :json=> {:status => true,:message => "Listing deleted!"}, :status=>200
 			else
      		render :json=> {:status => true,:message => "No data!"}, :status=>200
@@ -208,11 +210,15 @@ class InventoryManagementController < ApplicationController
 		if params[:user_id].present?
 			@user = User.find_by(id: params[:user_id])
 			if @user.is_admin?
-				# @item_source_ids.each do |id|
-					@item_source = ItemSource.find(params[:item_source_id])
-					@item_source.delete
-				# end
-				render :json=> {:status => true,:message => "Inventory Item deleted!"}, :status=>200
+				if params[:item_source_id].present?
+					params[:item_source_id].each do |id|
+						@item_source = ItemSource.find(id)
+						@item_source.delete
+					end
+					render :json=> {:status => true,:message => "Inventory Item deleted!"}, :status=>200
+				else
+					render :json=> {:status => true,:message => "There is no Inventory Item"}, :status=>200
+				end
 			else
      		render :json=> {:status => false,:message => "Current user not a admin User!"}, :status=>201
 			end
@@ -236,12 +242,6 @@ class InventoryManagementController < ApplicationController
 	end
 
 	private
-
-	def set_delete_all
-		@inventory_item_ids = JSON.parse(params[:inventory_item_ids])
-		@listing_ids = JSON.parse(params[:listing_ids])
-		@item_source_ids = JSON.parse(params[:item_source_ids])
-	end
 
 	def item_source_params
 		params.require(:item_source).permit(:id , :name, :short_name, :profit_share_percent)

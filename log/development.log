@@ -13317,3 +13317,48 @@ Processing by InventoryManagementController#delete_inventory_item as */*
   [1m[35mInventoryItem Load (50.3ms)[0m  SELECT  "inventory_items".* FROM "inventory_items" WHERE "inventory_items"."id" = $1 LIMIT 1  [["id", 1]]
   [1m[36mSQL (15.2ms)[0m  [1mDELETE FROM "inventory_items" WHERE "inventory_items"."id" = $1[0m  [["id", 1]]
 Completed 200 OK in 202ms (Views: 1.3ms | ActiveRecord: 71.9ms)
+
+
+Started POST "/create_inventory_item" for 127.0.0.1 at 2017-10-26 13:01:39 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (60.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by InventoryManagementController#create_inventory_item as */*
+  Parameters: {"user_id"=>"2", "icc"=>"test icc", "make"=>"test make"}
+  [1m[35mUser Load (40.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 400 Bad Request in 511ms (ActiveRecord: 303.8ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: inventory_item):
+  app/controllers/inventory_management_controller.rb:255:in `inventory_item_params'
+  app/controllers/inventory_management_controller.rb:21:in `create_inventory_item'
+
+
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (24.2ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.2ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (108.1ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.6ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.6ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (146.5ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (9.2ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (236.2ms)
+
+
+Started POST "/create_inventory_item" for 127.0.0.1 at 2017-10-26 13:02:35 +0530
+Processing by InventoryManagementController#create_inventory_item as */*
+  Parameters: {"user_id"=>"2", "inventory_item"=>{"icc"=>"test icc", "make"=>"test make"}}
+  [1m[36mUser Load (2.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36mSQL (130.2ms)[0m  [1mINSERT INTO "inventory_items" ("icc", "make", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["icc", "test icc"], ["make", "test make"], ["created_at", "2017-10-26 07:32:35.582502"], ["updated_at", "2017-10-26 07:32:35.582502"]]
+  [1m[35m (83.2ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+Completed 200 OK in 401ms (Views: 1.3ms | ActiveRecord: 328.0ms)
+
+
+Started POST "/create_inventory_item" for 127.0.0.1 at 2017-10-26 13:03:14 +0530
+Processing by InventoryManagementController#create_inventory_item as */*
+  Parameters: {"user_id"=>"1", "inventory_item"=>{"icc"=>"test icc", "make"=>"test make"}}
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 201 Created in 9ms (Views: 1.4ms | ActiveRecord: 1.9ms)
