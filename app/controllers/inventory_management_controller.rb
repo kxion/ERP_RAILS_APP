@@ -61,7 +61,7 @@ class InventoryManagementController < ApplicationController
 		if params[:user_id].present?
 			@user = User.find_by(id: params[:user_id])
 			if @user.is_admin?
-				@inventory_item_ids = eval(params[:inventory_item_id])
+				@inventory_item_ids = params[:inventory_item_id]
 				if @inventory_item_ids.present?
 					@inventory_item_ids.each do |id|
 						@inventory_item = InventoryItem.find(id)
@@ -136,7 +136,7 @@ class InventoryManagementController < ApplicationController
 	def delete_listing
 		if params[:user_id].present?
 			@user = User.find_by(id: params[:user_id])
-			@listing_id = eval(params[:listing_id])
+			@listing_id = params[:listing_id]
 			if @listing_id.present?
 				@listing_id.each do |id|
 					@listing = Listing.find(id)
@@ -212,7 +212,7 @@ class InventoryManagementController < ApplicationController
 		if params[:user_id].present?
 			@user = User.find_by(id: params[:user_id])
 			if @user.is_admin?
-				@item_source_id = eval(params[:item_source_id])
+				@item_source_id = params[:item_source_id]
 				if @item_source_id.present?
 					@item_source_id.each do |id|
 						@item_source = ItemSource.find(id)
