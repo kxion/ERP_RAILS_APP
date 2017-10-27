@@ -13362,3 +13362,163 @@ Processing by InventoryManagementController#create_inventory_item as */*
   Parameters: {"user_id"=>"1", "inventory_item"=>{"icc"=>"test icc", "make"=>"test make"}}
   [1m[36mUser Load (1.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
 Completed 201 Created in 9ms (Views: 1.4ms | ActiveRecord: 1.9ms)
+  [1m[36mInventoryItem Load (174.8ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items"[0m
+
+
+Started POST "/delete_inventory_item" for 127.0.0.1 at 2017-10-27 10:26:28 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (46.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by InventoryManagementController#delete_inventory_item as */*
+  Parameters: {"user_id"=>"2", "inventory_item_id"=>"1"}
+  [1m[35mUser Load (38.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 500 Internal Server Error in 270ms (ActiveRecord: 80.1ms)
+
+NoMethodError (undefined method `each' for "1":String):
+  app/controllers/inventory_management_controller.rb:65:in `delete_inventory_item'
+
+
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.3ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.5ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (92.7ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.3ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.7ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (159.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.7ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.4ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (250.6ms)
+
+
+Started POST "/delete_inventory_item" for 127.0.0.1 at 2017-10-27 10:28:29 +0530
+Processing by InventoryManagementController#delete_inventory_item as */*
+  Parameters: {"user_id"=>"2", "inventory_item_id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 9.6ms)
+
+NoMethodError (undefined method `each' for "1":String):
+  app/controllers/inventory_management_controller.rb:66:in `delete_inventory_item'
+
+
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.4ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (62.6ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.3ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (49.1ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.2ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (93.1ms)
+
+
+Started POST "/delete_inventory_item" for 127.0.0.1 at 2017-10-27 10:30:24 +0530
+Processing by InventoryManagementController#delete_inventory_item as */*
+  Parameters: {"user_id"=>"2", "inventory_item_id"=>{"0"=>"1"}}
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mInventoryItem Load (2.5ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items" WHERE "inventory_items"."id" IN (0, 1)[0m
+Completed 404 Not Found in 48ms (ActiveRecord: 8.6ms)
+
+ActiveRecord::RecordNotFound (Couldn't find all InventoryItems with 'id': (0, 1) (found 0 results, but was looking for 2)):
+  app/controllers/inventory_management_controller.rb:67:in `block in delete_inventory_item'
+  app/controllers/inventory_management_controller.rb:66:in `delete_inventory_item'
+
+
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (59.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (43.7ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (85.4ms)
+
+
+Started POST "/delete_inventory_item" for 127.0.0.1 at 2017-10-27 12:45:51 +0530
+Processing by InventoryManagementController#delete_inventory_item as */*
+  Parameters: {"user_id"=>"2", "inventory_item_id"=>{"0"=>"1"}}
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mInventoryItem Load (1.4ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items" WHERE "inventory_items"."id" IN (0, 1)[0m
+Completed 404 Not Found in 126ms (ActiveRecord: 45.6ms)
+
+ActiveRecord::RecordNotFound (Couldn't find all InventoryItems with 'id': (0, 1) (found 0 results, but was looking for 2)):
+  app/controllers/inventory_management_controller.rb:67:in `block in delete_inventory_item'
+  app/controllers/inventory_management_controller.rb:66:in `each'
+  app/controllers/inventory_management_controller.rb:66:in `delete_inventory_item'
+
+
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.4ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.3ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (119.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.6ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (42.2ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (90.1ms)
+
+
+Started POST "/delete_inventory_item" for 127.0.0.1 at 2017-10-27 12:46:22 +0530
+Processing by InventoryManagementController#delete_inventory_item as */*
+  Parameters: {"user_id"=>"2", "inventory_item_id"=>"1"}
+  [1m[35mUser Load (1.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.7ms)
+
+NoMethodError (undefined method `to_a' for "1":String
+Did you mean?  to_yaml
+               to_date
+               to_param
+               to_f
+               to_i
+               to_s
+               to_d
+               to_r
+               to_c):
+  app/controllers/inventory_management_controller.rb:64:in `delete_inventory_item'
+
+
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.1ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.3ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.6ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.3ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (78.7ms)
+
+
+Started POST "/delete_inventory_item" for 127.0.0.1 at 2017-10-27 12:53:38 +0530
+Processing by InventoryManagementController#delete_inventory_item as */*
+  Parameters: {"user_id"=>"2", "inventory_item_id"=>"1"}
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 10.4ms)
+
+NoMethodError (undefined method `each' for 1:Fixnum):
+  app/controllers/inventory_management_controller.rb:66:in `delete_inventory_item'
+
+
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.6ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (61.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (43.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.5ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (84.6ms)
