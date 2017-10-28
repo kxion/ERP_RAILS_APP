@@ -64,14 +64,16 @@ class InventoryManagementController < ApplicationController
 				@split_id = params[:inventory_item_id]
 				@inventory_item_ids = @split_id.split(',')
 				if @inventory_item_ids.present?
-					@inventory_item_ids.each do |id|
-						@inventory_item = InventoryItem.find(id)
-						if @inventory_item.present?
-							@inventory_item.delete
-							render :json=> {:status => true,:message => "Inventory Item deleted!"}, :status=>200
-						else
-							render :json=> {:status => true,:message => "There is no Inventory Item!"}, :status=>200
+					begin
+						@inventory_item_ids.each do |id|
+							@inventory_item = InventoryItem.find(id)
+							if @inventory_item.present?
+								@inventory_item.delete
+							end
 						end
+						render :json=> {:status => true,:message => "Inventory Item deleted!"}, :status=>200
+					rescue Exception => e
+						render :json=> {:status => true,:message => "There is no Inventory Item!"}, :status=>200
 					end
 				else
 					render :json=> {:status => true,:message => "There is no Inventory Item!"}, :status=>200
@@ -144,14 +146,16 @@ class InventoryManagementController < ApplicationController
 			@split_id = params[:listing_id]
 			@listing_id = @split_id.split(',')
 			if @listing_id.present?
-				@listing_id.each do |id|
-					@listing = Listing.find(id)
-					if @listing.present?
-						@listing.delete
-						render :json=> {:status => true,:message => "Listing deleted!"}, :status=>200
-					else
-     				render :json=> {:status => true,:message => "No data!"}, :status=>200
+				begin
+					@listing_id.each do |id|
+						@listing = Listing.find(id)
+						if @listing.present?
+							@listing.delete
+						end
 					end
+					render :json=> {:status => true,:message => "Listing deleted!"}, :status=>200
+				rescue Exception => e
+	     		render :json=> {:status => true,:message => "No data!"}, :status=>200
 				end
 			else
      		render :json=> {:status => true,:message => "No data!"}, :status=>200
@@ -225,14 +229,16 @@ class InventoryManagementController < ApplicationController
 				@split_id = params[:item_source_id]
 				@item_source_id = @split_id.split(',')
 				if @item_source_id.present?
-					@item_source_id.each do |id|
-						@item_source = ItemSource.find(id.to_i)
-						if @item_source.present?
-							render :json=> {:status => true,:message => "Inventory Item deleted!"}, :status=>200
-							@item_source.delete
-						else
-							render :json=> {:status => true,:message => "There is no Inventory Item"}, :status=>200
+					begin
+						@item_source_id.each do |id|
+							@item_source = ItemSource.find(id.to_i)
+							if @item_source.present?
+								@item_source.delete
+							end
 						end
+						render :json=> {:status => true,:message => "Inventory Item deleted!"}, :status=>200
+					rescue Exception => e
+						render :json=> {:status => true,:message => "There is no Inventory Item"}, :status=>200
 					end
 				else
 					render :json=> {:status => true,:message => "There is no Inventory Item"}, :status=>200
