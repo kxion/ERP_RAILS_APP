@@ -65,9 +65,13 @@ class InventoryManagementController < ApplicationController
 				if @inventory_item_ids.present?
 					@inventory_item_ids.each do |id|
 						@inventory_item = InventoryItem.find(id)
-						@inventory_item.delete
+						if @inventory_item.present?
+							@inventory_item.delete
+							render :json=> {:status => true,:message => "Inventory Item deleted!"}, :status=>200
+						else
+							render :json=> {:status => true,:message => "There is no Inventory Item!"}, :status=>200
+						end
 					end
-					render :json=> {:status => true,:message => "Inventory Item deleted!"}, :status=>200
 				else
 					render :json=> {:status => true,:message => "There is no Inventory Item!"}, :status=>200
 				end
@@ -140,9 +144,13 @@ class InventoryManagementController < ApplicationController
 			if @listing_id.present?
 				@listing_id.each do |id|
 					@listing = Listing.find(id)
-					@listing.delete
+					if @listing.present?
+						@listing.delete
+						render :json=> {:status => true,:message => "Listing deleted!"}, :status=>200
+					else
+     				render :json=> {:status => true,:message => "No data!"}, :status=>200
+					end
 				end
-				render :json=> {:status => true,:message => "Listing deleted!"}, :status=>200
 			else
      		render :json=> {:status => true,:message => "No data!"}, :status=>200
 			end
@@ -216,9 +224,13 @@ class InventoryManagementController < ApplicationController
 				if @item_source_id.present?
 					@item_source_id.each do |id|
 						@item_source = ItemSource.find(id)
-						@item_source.delete
+						if @item_source.present?
+							render :json=> {:status => true,:message => "Inventory Item deleted!"}, :status=>200
+							@item_source.delete
+						else
+							render :json=> {:status => true,:message => "There is no Inventory Item"}, :status=>200
+						end
 					end
-					render :json=> {:status => true,:message => "Inventory Item deleted!"}, :status=>200
 				else
 					render :json=> {:status => true,:message => "There is no Inventory Item"}, :status=>200
 				end
