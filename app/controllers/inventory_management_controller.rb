@@ -19,7 +19,7 @@ class InventoryManagementController < ApplicationController
 			if @user.is_admin?
 				@inventory_item = InventoryItem.create(inventory_item_params)
 				@inventory_item.save
-				render :json=> {:status => true,:message => "Inventory Item created!"}, :status=>200
+				render :json=> {:status => true,:message => "Inventory Item created!", inventory_item_id: @inventory_item.try(:id)}, :status=>200
 			else
      		render :json=> {:status => false,:message => "Current user not a admin User!"}, :status=>201
 			end
@@ -105,7 +105,7 @@ class InventoryManagementController < ApplicationController
 			@user = User.find_by(id: params[:user_id])
 			@listing = @user.listings.create(listings_params)
 			@listing.save
-			render :json=> {:status => true,:message => "Listing created!"}, :status=>200
+			render :json=> {:status => true,:message => "Listing created!", listing_id: @listing.try(:id)}, :status=>200
 		else
      	render :json=> {:status => false,:message => "Something Went Wrong!"}, :status=>201
 		end
@@ -186,7 +186,7 @@ class InventoryManagementController < ApplicationController
 			if @user.is_admin?
 				@item_source = ItemSource.create(item_source_params)
 				@item_source.save
-				render :json=> {:status => true,:message => "Item Source created!"}, :status=>200
+				render :json=> {:status => true,:message => "Item Source created!", item_source_id: @item_source.try(:id)}, :status=>200
 			else
      			render :json=> {:status => false,:message => "Current user not a admin User!"}, :status=>201
 			end
@@ -236,12 +236,12 @@ class InventoryManagementController < ApplicationController
 								@item_source.delete
 							end
 						end
-						render :json=> {:status => true,:message => "Inventory Item deleted!"}, :status=>200
+						render :json=> {:status => true,:message => "Item source deleted!"}, :status=>200
 					rescue Exception => e
-						render :json=> {:status => true,:message => "There is no Inventory Item"}, :status=>200
+						render :json=> {:status => true,:message => "There is no Item source"}, :status=>200
 					end
 				else
-					render :json=> {:status => true,:message => "There is no Inventory Item"}, :status=>200
+					render :json=> {:status => true,:message => "There is no Item source"}, :status=>200
 				end
 			else
      		render :json=> {:status => false,:message => "Current user not a admin User!"}, :status=>201

@@ -13683,3 +13683,166 @@ Processing by InventoryManagementController#delete_inventory_item as */*
   [1m[35mInventoryItem Load (1.4ms)[0m  SELECT  "inventory_items".* FROM "inventory_items" WHERE "inventory_items"."id" = $1 LIMIT 1  [["id", 6]]
   [1m[36mSQL (10.2ms)[0m  [1mDELETE FROM "inventory_items" WHERE "inventory_items"."id" = $1[0m  [["id", 6]]
 Completed 200 OK in 109ms (Views: 0.8ms | ActiveRecord: 69.8ms)
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (47.1ms)[0m  INSERT INTO "item_sources" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2017-10-28 09:23:24.878375"], ["updated_at", "2017-10-28 09:23:24.878375"]]
+  [1m[36m (19.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "item_sources" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2017-10-28 09:23:25.643985"], ["updated_at", "2017-10-28 09:23:25.643985"]]
+  [1m[35m (17.7ms)[0m  COMMIT
+  [1m[36m (0.9ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "item_sources" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2017-10-28 09:23:26.458006"], ["updated_at", "2017-10-28 09:23:26.458006"]]
+  [1m[36m (20.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "item_sources" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2017-10-28 09:23:27.051634"], ["updated_at", "2017-10-28 09:23:27.051634"]]
+  [1m[35m (15.3ms)[0m  COMMIT
+  [1m[36m (0.8ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "item_sources" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2017-10-28 09:23:29.825893"], ["updated_at", "2017-10-28 09:23:29.825893"]]
+  [1m[36m (60.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "item_sources" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2017-10-28 09:23:30.317706"], ["updated_at", "2017-10-28 09:23:30.317706"]]
+  [1m[35m (5.5ms)[0m  COMMIT
+  [1m[36m (0.8ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "item_sources" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2017-10-28 09:23:30.807767"], ["updated_at", "2017-10-28 09:23:30.807767"]]
+  [1m[36m (11.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "item_sources" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2017-10-28 09:23:31.252303"], ["updated_at", "2017-10-28 09:23:31.252303"]]
+  [1m[35m (3.8ms)[0m  COMMIT
+  [1m[36m (0.9ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "item_sources" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2017-10-28 09:23:31.687634"], ["updated_at", "2017-10-28 09:23:31.687634"]]
+  [1m[36m (6.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "item_sources" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2017-10-28 09:23:32.092145"], ["updated_at", "2017-10-28 09:23:32.092145"]]
+  [1m[35m (6.5ms)[0m  COMMIT
+
+
+Started POST "/delete_item_source" for 127.0.0.1 at 2017-10-28 14:54:06 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by InventoryManagementController#delete_item_source as */*
+  Parameters: {"user_id"=>"1", "item_source_id"=>"2,3"}
+  [1m[35mUser Load (2.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 201 Created in 126ms (Views: 0.7ms | ActiveRecord: 15.3ms)
+
+
+Started POST "/delete_item_source" for 127.0.0.1 at 2017-10-28 14:54:13 +0530
+Processing by InventoryManagementController#delete_item_source as */*
+  Parameters: {"user_id"=>"2", "item_source_id"=>"2,3"}
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mItemSource Load (1.2ms)[0m  SELECT  "item_sources".* FROM "item_sources" WHERE "item_sources"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mSQL (19.3ms)[0m  [1mDELETE FROM "item_sources" WHERE "item_sources"."id" = $1[0m  [["id", 2]]
+  [1m[35mItemSource Load (1.0ms)[0m  SELECT  "item_sources".* FROM "item_sources" WHERE "item_sources"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mSQL (11.8ms)[0m  [1mDELETE FROM "item_sources" WHERE "item_sources"."id" = $1[0m  [["id", 3]]
+Completed 200 OK in 77ms (Views: 0.9ms | ActiveRecord: 39.0ms)
+
+
+Started POST "/delete_item_source" for 127.0.0.1 at 2017-10-28 15:36:11 +0530
+Processing by InventoryManagementController#delete_item_source as */*
+  Parameters: {"user_id"=>"2", "item_source_id"=>"2,3"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mItemSource Load (1.2ms)[0m  [1mSELECT  "item_sources".* FROM "item_sources" WHERE "item_sources"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 129ms (Views: 0.6ms | ActiveRecord: 15.4ms)
+
+
+Started POST "/delete_item_source" for 127.0.0.1 at 2017-10-28 15:36:24 +0530
+Processing by InventoryManagementController#delete_item_source as */*
+  Parameters: {"user_id"=>"2", "item_source_id"=>"4"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mItemSource Load (0.9ms)[0m  [1mSELECT  "item_sources".* FROM "item_sources" WHERE "item_sources"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mSQL (15.9ms)[0m  DELETE FROM "item_sources" WHERE "item_sources"."id" = $1  [["id", 4]]
+Completed 200 OK in 35ms (Views: 0.6ms | ActiveRecord: 18.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-01 07:04:34 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (3.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (4.4ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (142.6ms)
+Completed 200 OK in 708ms (Views: 478.9ms | ActiveRecord: 125.5ms)
+
+
+Started GET "/assets/application-7377024958ba493eaaac8c984a5eadbb.css?body=1" for 127.0.0.1 at 2017-11-01 07:04:36 +0530
+
+
+Started GET "/assets/turbolinks-ec43e9d221200f76649ada6a93a32e1b.js?body=1" for 127.0.0.1 at 2017-11-01 07:04:36 +0530
+
+
+Started GET "/assets/jquery-06e29fe56831942b4f21ce49e45e1429.js?body=1" for 127.0.0.1 at 2017-11-01 07:04:36 +0530
+
+
+Started GET "/assets/jquery_ujs-b58be681f2702254e79c46cdcbbc9616.js?body=1" for 127.0.0.1 at 2017-11-01 07:04:36 +0530
+
+
+Started GET "/assets/application-47f576ff989e996390ab5dd2b5544dc9.js?body=1" for 127.0.0.1 at 2017-11-01 07:04:36 +0530
+
+
+Started POST "/create_inventory_item" for 127.0.0.1 at 2017-11-01 07:06:29 +0530
+Processing by InventoryManagementController#create_inventory_item as */*
+  Parameters: {"user_id"=>"2", "inventory_item"=>{"icc"=>"test"}}
+  [1m[35mUser Load (49.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (53.1ms)[0m  INSERT INTO "inventory_items" ("icc", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["icc", "test"], ["created_at", "2017-11-01 01:36:30.092826"], ["updated_at", "2017-11-01 01:36:30.092826"]]
+  [1m[36m (21.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 313ms (Views: 1.7ms | ActiveRecord: 157.9ms)
+
+
+Started POST "/create_inventory_item" for 127.0.0.1 at 2017-11-01 07:07:06 +0530
+Processing by InventoryManagementController#create_inventory_item as */*
+  Parameters: {"user_id"=>"2", "inventory_item"=>{"icc"=>"test"}}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "inventory_items" ("icc", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["icc", "test"], ["created_at", "2017-11-01 01:37:07.120196"], ["updated_at", "2017-11-01 01:37:07.120196"]]
+  [1m[36m (76.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 237ms (Views: 1.1ms | ActiveRecord: 92.7ms)
+
+
+Started POST "/create_listing" for 127.0.0.1 at 2017-11-01 07:11:47 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by InventoryManagementController#create_listing as */*
+  Parameters: {"user_id"=>"2", "listing"=>{"title"=>"test"}}
+  [1m[35mUser Load (2.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (48.8ms)[0m  INSERT INTO "listings" ("title", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "test"], ["user_id", 2], ["created_at", "2017-11-01 01:41:47.883911"], ["updated_at", "2017-11-01 01:41:47.883911"]]
+  [1m[36m (20.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 409ms (Views: 1.4ms | ActiveRecord: 128.3ms)
+
+
+Started POST "/create_item_source" for 127.0.0.1 at 2017-11-01 07:12:36 +0530
+Processing by InventoryManagementController#create_item_source as */*
+  Parameters: {"user_id"=>"2", "create_item_source"=>{"name"=>"test"}}
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 400 Bad Request in 18ms (ActiveRecord: 1.6ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: item_source):
+  app/controllers/inventory_management_controller.rb:271:in `item_source_params'
+  app/controllers/inventory_management_controller.rb:187:in `create_item_source'
+
+
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.6ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.1ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (72.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.7ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (114.1ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (184.9ms)
+
+
+Started POST "/create_item_source" for 127.0.0.1 at 2017-11-01 07:13:03 +0530
+Processing by InventoryManagementController#create_item_source as */*
+  Parameters: {"user_id"=>"2", "item_source"=>{"name"=>"test"}}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mSQL (66.2ms)[0m  [1mINSERT INTO "item_sources" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "test"], ["created_at", "2017-11-01 01:43:03.191444"], ["updated_at", "2017-11-01 01:43:03.191444"]]
+  [1m[35m (19.7ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+Completed 200 OK in 126ms (Views: 0.9ms | ActiveRecord: 93.6ms)
