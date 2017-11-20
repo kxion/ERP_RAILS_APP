@@ -82,12 +82,12 @@ class SalesOrdersController < ApplicationController
         @user = User.find_by(id: params[:user_id])
         @sales_order = SalesOrder.where(sales_user_id: @user.id)
         if @sales_order.present?
-          render :json=> {:status => true,:message => "Sales Order list!"}, :status=>200
+          render :json=> {:status => true,:message => "Sales Order list!", :sales_order => @sales_order}, :status=>200
         else
           render :json=> {:status => true,:message => "No data!"}, :status=>200
         end
       else
-        render :json=> {:status => true,:message => "Something Went Wrong!", :sales_order => @sales_order}, :status=>201
+        render :json=> {:status => true,:message => "Something Went Wrong!"}, :status=>201
       end
       # salesOrders = SalesOrder.sales_sales_orders(current_user)
       # render status: 200, json: SalesOrder.get_json_sales_orders_dropdown(salesOrders)
