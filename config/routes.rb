@@ -212,6 +212,10 @@ Rails.application.routes.draw do
     post '/delete_listing' => 'inventory_management#delete_listing'
     post '/delete_item_source' => 'inventory_management#delete_item_source'
     # search
+    post '/search_inventory_item' => 'inventory_management#search_inventory_item'
+    post '/search_listing' => 'inventory_management#search_listing'
+    post '/search_item_source' => 'inventory_management#search_item_source'
+
 
     
     # default integration custom actions paths

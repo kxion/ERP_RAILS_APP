@@ -14002,3 +14002,1375 @@ NoMethodError (undefined method `id' for nil:NilClass):
   Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.2ms)
   Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
   Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (86.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-20 10:27:57 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (4.2ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (116.0ms)
+Completed 200 OK in 616ms (Views: 497.5ms | ActiveRecord: 29.1ms)
+
+
+Started GET "/assets/application-7377024958ba493eaaac8c984a5eadbb.css?body=1" for 127.0.0.1 at 2017-11-20 10:27:58 +0530
+
+
+Started GET "/assets/jquery_ujs-b58be681f2702254e79c46cdcbbc9616.js?body=1" for 127.0.0.1 at 2017-11-20 10:27:58 +0530
+
+
+Started GET "/assets/turbolinks-ec43e9d221200f76649ada6a93a32e1b.js?body=1" for 127.0.0.1 at 2017-11-20 10:27:58 +0530
+
+
+Started GET "/assets/jquery-06e29fe56831942b4f21ce49e45e1429.js?body=1" for 127.0.0.1 at 2017-11-20 10:27:58 +0530
+
+
+Started GET "/assets/application-47f576ff989e996390ab5dd2b5544dc9.js?body=1" for 127.0.0.1 at 2017-11-20 10:27:58 +0530
+  [1m[36mItemSource Load (171.5ms)[0m  [1mSELECT  "item_sources".* FROM "item_sources"  ORDER BY "item_sources"."id" DESC LIMIT 1[0m
+  [1m[35mItemSource Load (29.4ms)[0m  SELECT "item_sources".* FROM "item_sources"
+  [1m[36mItemSource Load (1.7ms)[0m  [1mSELECT "item_sources".* FROM "item_sources"[0m
+  [1m[35mItemSource Load (1.8ms)[0m  SELECT "item_sources".* FROM "item_sources"
+  [1m[36m (17.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (28.0ms)[0m  UPDATE "item_sources" SET "name" = $1, "short_name" = $2, "profit_share_percent" = $3, "updated_at" = $4 WHERE "item_sources"."id" = $5  [["name", "test_name0"], ["short_name", "test_short_name0"], ["profit_share_percent", "90.0"], ["updated_at", "2017-11-20 05:59:03.745274"], ["id", 5]]
+  [1m[36m (58.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36mSQL (1.2ms)[0m  [1mUPDATE "item_sources" SET "name" = $1, "short_name" = $2, "profit_share_percent" = $3, "updated_at" = $4 WHERE "item_sources"."id" = $5[0m  [["name", "test_name1"], ["short_name", "test_short_name1"], ["profit_share_percent", "90.0"], ["updated_at", "2017-11-20 05:59:04.513266"], ["id", 6]]
+  [1m[35m (6.6ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  UPDATE "item_sources" SET "name" = $1, "short_name" = $2, "profit_share_percent" = $3, "updated_at" = $4 WHERE "item_sources"."id" = $5  [["name", "test_name2"], ["short_name", "test_short_name2"], ["profit_share_percent", "90.0"], ["updated_at", "2017-11-20 05:59:04.528945"], ["id", 7]]
+  [1m[36m (8.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mUPDATE "item_sources" SET "name" = $1, "short_name" = $2, "profit_share_percent" = $3, "updated_at" = $4 WHERE "item_sources"."id" = $5[0m  [["name", "test_name3"], ["short_name", "test_short_name3"], ["profit_share_percent", "90.0"], ["updated_at", "2017-11-20 05:59:04.546736"], ["id", 8]]
+  [1m[35m (4.9ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "item_sources" SET "name" = $1, "short_name" = $2, "profit_share_percent" = $3, "updated_at" = $4 WHERE "item_sources"."id" = $5  [["name", "test_name4"], ["short_name", "test_short_name4"], ["profit_share_percent", "90.0"], ["updated_at", "2017-11-20 05:59:04.561770"], ["id", 9]]
+  [1m[36m (9.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mUPDATE "item_sources" SET "name" = $1, "short_name" = $2, "profit_share_percent" = $3, "updated_at" = $4 WHERE "item_sources"."id" = $5[0m  [["name", "test_name5"], ["short_name", "test_short_name5"], ["profit_share_percent", "90.0"], ["updated_at", "2017-11-20 05:59:04.578265"], ["id", 10]]
+  [1m[35m (8.8ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE "item_sources" SET "name" = $1, "short_name" = $2, "profit_share_percent" = $3, "updated_at" = $4 WHERE "item_sources"."id" = $5  [["name", "test_name6"], ["short_name", "test_short_name6"], ["profit_share_percent", "90.0"], ["updated_at", "2017-11-20 05:59:04.595130"], ["id", 11]]
+  [1m[36m (9.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "item_sources" SET "name" = $1, "short_name" = $2, "profit_share_percent" = $3, "updated_at" = $4 WHERE "item_sources"."id" = $5[0m  [["name", "test_name7"], ["short_name", "test_short_name7"], ["profit_share_percent", "90.0"], ["updated_at", "2017-11-20 05:59:04.611813"], ["id", 12]]
+  [1m[35m (8.4ms)[0m  COMMIT
+  [1m[36mItemSource Load (62.5ms)[0m  [1mSELECT "item_sources".* FROM "item_sources" WHERE (2)[0m
+  [1m[35mSalesOrder Load (2.3ms)[0m  SELECT  "sales_orders".* FROM "sales_orders"  ORDER BY "sales_orders"."id" DESC LIMIT 1
+  [1m[36mItemSource Load (2.4ms)[0m  [1mSELECT "item_sources".* FROM "item_sources" WHERE (2)[0m
+  [1m[35mItemSource Load (1.7ms)[0m  SELECT "item_sources".* FROM "item_sources"
+  [1m[36mItemSource Load (2.2ms)[0m  [1mSELECT "item_sources".* FROM "item_sources" WHERE (5)[0m
+  [1m[35mItemSource Load (2.1ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE (5)
+  [1m[36mUser Load (39.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (1.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mItemSource Load (1.3ms)[0m  [1mSELECT  "item_sources".* FROM "item_sources" WHERE "item_sources"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mItemSource Load (2.8ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE (5)
+  [1m[36mItemSource Load (1.8ms)[0m  [1mSELECT "item_sources".* FROM "item_sources" WHERE (id = 1)[0m
+  [1m[35mItemSource Load (1.6ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE (id = 2)
+  [1m[36mItemSource Load (1.6ms)[0m  [1mSELECT "item_sources".* FROM "item_sources" WHERE (id = 10)[0m
+  [1m[35mItemSource Load (1.9ms)[0m  SELECT  "item_sources".* FROM "item_sources"  ORDER BY "item_sources"."id" DESC LIMIT 1
+  [1m[36mItemSource Load (2.6ms)[0m  [1mSELECT "item_sources".* FROM "item_sources" WHERE (id LIKE '2' OR name LIKE '2' OR)[0m
+  [1m[35mItemSource Load (2.3ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE (id LIKE 2 OR name LIKE 2 OR)
+  [1m[36mItemSource Load (3.0ms)[0m  [1mSELECT "item_sources".* FROM "item_sources" WHERE (id LIKE '2' OR name LIKE '2')[0m
+  [1m[35mItemSource Load (3.0ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE (id LIKE '2' OR name LIKE '2')
+  [1m[36mItemSource Load (22.9ms)[0m  [1mSELECT "item_sources".* FROM "item_sources" WHERE (name LIKE 'test1')[0m
+  [1m[35mItemSource Load (1.8ms)[0m  SELECT  "item_sources".* FROM "item_sources"  ORDER BY "item_sources"."id" DESC LIMIT 1
+  [1m[36mItemSource Load (1.7ms)[0m  [1mSELECT "item_sources".* FROM "item_sources" WHERE (name LIKE 'test_name7')[0m
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 12:06:31 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_box"=>"2"}}
+  [1m[35mUser Load (3.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 317ms (ActiveRecord: 52.3ms)
+
+ActionView::MissingTemplate (Missing template inventory_management/search_item_source, application/search_item_source with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :png, :jpeg, :gif, :bmp, :tiff, :mpeg, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :web_console_v2], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/lt/projects/erp/ERP_RAILS_APP/app/views"
+  * "/home/lt/.rvm/gems/ruby-2.3.0@erb/gems/devise-4.2.0/app/views"
+):
+  actionview (4.2.6) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.6) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.6) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.6) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/lt/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+  warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.6) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.6) lib/warden/manager.rb:34:in `call'
+  rack (1.6.5) lib/rack/etag.rb:24:in `call'
+  rack (1.6.5) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.5) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /home/lt/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/lt/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/lt/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.4ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.1ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.6ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (83.7ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.3ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (46.2ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (106.2ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 12:07:50 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_box"=>"2"}}
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 97ms (ActiveRecord: 14.3ms)
+
+ActionView::MissingTemplate (Missing template inventory_management/search_item_source, application/search_item_source with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :png, :jpeg, :gif, :bmp, :tiff, :mpeg, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :web_console_v2], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/lt/projects/erp/ERP_RAILS_APP/app/views"
+  * "/home/lt/.rvm/gems/ruby-2.3.0@erb/gems/devise-4.2.0/app/views"
+):
+  actionview (4.2.6) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.6) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.6) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.6) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/lt/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+  warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.6) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.6) lib/warden/manager.rb:34:in `call'
+  rack (1.6.5) lib/rack/etag.rb:24:in `call'
+  rack (1.6.5) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.5) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /home/lt/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/lt/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/lt/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.7ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.4ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (57.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (78.5ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 12:08:49 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_box"=>"2"}}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 102ms (ActiveRecord: 11.4ms)
+
+ActionView::MissingTemplate (Missing template inventory_management/search_item_source, application/search_item_source with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :png, :jpeg, :gif, :bmp, :tiff, :mpeg, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :web_console_v2], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/lt/projects/erp/ERP_RAILS_APP/app/views"
+  * "/home/lt/.rvm/gems/ruby-2.3.0@erb/gems/devise-4.2.0/app/views"
+):
+  actionview (4.2.6) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.6) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.6) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.6) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/lt/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+  warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.6) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.6) lib/warden/manager.rb:34:in `call'
+  rack (1.6.5) lib/rack/etag.rb:24:in `call'
+  rack (1.6.5) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.5) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /home/lt/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/lt/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/lt/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.1ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.5ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (58.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (41.5ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.3ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (81.5ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 12:09:08 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_box"=>"2"}}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mItemSource Load (1.1ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE "item_sources"."id" = $1  [["id", 2]]
+Completed 200 OK in 79ms (Views: 12.6ms | ActiveRecord: 11.4ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 12:26:55 +0530
+
+SyntaxError (/home/lt/projects/erp/ERP_RAILS_APP/app/controllers/inventory_management_controller.rb:297: void value expression):
+  app/controllers/inventory_management_controller.rb:297: void value expression
+
+
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.1ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (47.1ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (86.1ms)
+  [1m[35mItemSource Load (1.6ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE (name LIKE 'test_name7')
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 12:28:06 +0530
+
+SyntaxError (/home/lt/projects/erp/ERP_RAILS_APP/app/controllers/inventory_management_controller.rb:297: void value expression):
+  app/controllers/inventory_management_controller.rb:297: void value expression
+
+
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (29.5ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.2ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.1ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (37.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (75.0ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 12:28:40 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"name"=>"test_name7"}}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 10.7ms)
+
+NoMethodError (undefined method `gsub' for nil:NilClass):
+  app/controllers/inventory_management_controller.rb:286:in `search_item_source'
+
+
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.6ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.2ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.4ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (80.9ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 12:29:47 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"name"=>"test_name7"}}
+  [1m[35mUser Load (1.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 96ms (ActiveRecord: 10.6ms)
+
+ActionView::MissingTemplate (Missing template inventory_management/search_item_source, application/search_item_source with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :png, :jpeg, :gif, :bmp, :tiff, :mpeg, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :web_console_v2], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/lt/projects/erp/ERP_RAILS_APP/app/views"
+  * "/home/lt/.rvm/gems/ruby-2.3.0@erb/gems/devise-4.2.0/app/views"
+):
+  actionview (4.2.6) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.6) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.6) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.6) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/lt/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+  warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.6) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.6) lib/warden/manager.rb:34:in `call'
+  rack (1.6.5) lib/rack/etag.rb:24:in `call'
+  rack (1.6.5) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.5) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /home/lt/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/lt/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/lt/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (17.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.2ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (62.1ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (43.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.1ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (85.5ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 12:30:26 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"name"=>"test_name7"}}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mItemSource Load (48.8ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE (name = 'test_name7')
+Completed 200 OK in 136ms (Views: 18.7ms | ActiveRecord: 62.7ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 12:31:08 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_text"=>"test_name7"}}
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 8ms (Views: 0.7ms | ActiveRecord: 1.7ms)
+  [1m[36mItemSource Load (1.8ms)[0m  [1mSELECT "item_sources".* FROM "item_sources" WHERE (name LIKE 'test_name7' OR short_name LIKE 'test_name7')[0m
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 12:32:19 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_text"=>"test_name7"}}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 75ms (Views: 0.6ms | ActiveRecord: 9.9ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 12:32:51 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_text"=>"test_name7"}}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 55ms (Views: 0.7ms | ActiveRecord: 10.5ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 12:33:25 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_box"=>"test_name7"}}
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mItemSource Load (1.1ms)[0m  [1mSELECT "item_sources".* FROM "item_sources" WHERE "item_sources"."id" = $1[0m  [["id", 7]]
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 7.2ms)
+
+ActionView::MissingTemplate (Missing template inventory_management/search_item_source, application/search_item_source with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :png, :jpeg, :gif, :bmp, :tiff, :mpeg, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :web_console_v2], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/lt/projects/erp/ERP_RAILS_APP/app/views"
+  * "/home/lt/.rvm/gems/ruby-2.3.0@erb/gems/devise-4.2.0/app/views"
+):
+  actionview (4.2.6) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.6) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.6) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.6) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/lt/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+  warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.6) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.6) lib/warden/manager.rb:34:in `call'
+  rack (1.6.5) lib/rack/etag.rb:24:in `call'
+  rack (1.6.5) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.5) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /home/lt/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/lt/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/lt/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.3ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.7ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (64.3ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (41.3ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (82.5ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 12:33:54 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_box"=>"test_name7"}}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mItemSource Load (1.5ms)[0m  [1mSELECT "item_sources".* FROM "item_sources" WHERE "item_sources"."id" = $1[0m  [["id", 7]]
+Completed 200 OK in 119ms (Views: 1.3ms | ActiveRecord: 16.8ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 12:34:03 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_box"=>"7"}}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mItemSource Load (1.2ms)[0m  [1mSELECT "item_sources".* FROM "item_sources" WHERE "item_sources"."id" = $1[0m  [["id", 7]]
+Completed 200 OK in 13ms (Views: 1.7ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 12:35:00 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_box"=>"test_name7"}}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mItemSource Load (1.1ms)[0m  [1mSELECT "item_sources".* FROM "item_sources" WHERE "item_sources"."id" = $1[0m  [["id", 7]]
+Completed 200 OK in 118ms (Views: 2.1ms | ActiveRecord: 16.6ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 12:35:11 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_box"=>"test_name"}}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mItemSource Load (1.8ms)[0m  [1mSELECT "item_sources".* FROM "item_sources" WHERE (name LIKE 'test_name' OR short_name LIKE 'test_name')[0m
+Completed 200 OK in 11ms (Views: 0.7ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 12:38:46 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_box"=>"1"}}
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mItemSource Load (1.9ms)[0m  [1mSELECT "item_sources".* FROM "item_sources" WHERE (name LIKE '1' OR short_name LIKE '1')[0m
+Completed 200 OK in 102ms (Views: 0.9ms | ActiveRecord: 16.0ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 12:41:57 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_box"=>"1"}}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 118ms (ActiveRecord: 9.4ms)
+
+NameError (undefined local variable or method `code' for #<InventoryManagementController:0x007f9610b17878>):
+  app/controllers/inventory_management_controller.rb:290:in `search_item_source'
+
+
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (25.4ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.2ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.7ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (93.4ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.6ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.4ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.5ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (52.6ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.4ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (99.5ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 12:42:29 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_box"=>"1"}}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mItemSource Load (1.2ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE "item_sources"."id" = $1  [["id", 1]]
+Completed 200 OK in 70ms (Views: 0.9ms | ActiveRecord: 14.7ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 12:43:08 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_box"=>"test_name7"}}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mItemSource Load (1.3ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE (name LIKE 'test_name7' OR short_name LIKE 'test_name7')
+Completed 200 OK in 24ms (Views: 1.3ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 12:43:16 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_box"=>"7"}}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mItemSource Load (1.0ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE "item_sources"."id" = $1  [["id", 7]]
+Completed 200 OK in 11ms (Views: 1.1ms | ActiveRecord: 2.3ms)
+  [1m[35mItemSource Load (1.2ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE "item_sources"."id" = $1  [["id", 1]]
+  [1m[36mItemSource Load (1.3ms)[0m  [1mSELECT "item_sources".* FROM "item_sources" WHERE "item_sources"."id" = $1[0m  [["id", 1]]
+  [1m[35mItemSource Load (1.6ms)[0m  SELECT  "item_sources".* FROM "item_sources"  ORDER BY "item_sources"."id" DESC LIMIT 1
+  [1m[36m (0.8ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (24.4ms)[0m  INSERT INTO "item_sources" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "test_name7"], ["created_at", "2017-11-20 07:17:03.176643"], ["updated_at", "2017-11-20 07:17:03.176643"]]
+  [1m[36m (49.0ms)[0m  [1mCOMMIT[0m
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 12:47:35 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_box"=>"test_name7"}}
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mItemSource Load (1.8ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE (name LIKE 'test_name7' OR short_name LIKE 'test_name7')
+Completed 200 OK in 108ms (Views: 17.3ms | ActiveRecord: 18.8ms)
+  [1m[35mItemSource Load (3.2ms)[0m  SELECT "item_sources".* FROM "item_sources"
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 12:53:54 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_box"=>"test_name7", "short_name"=>"test_short_name0"}}
+  [1m[36mUser Load (2.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mItemSource Load (5.5ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE (name LIKE 'test_name7' OR short_name LIKE 'test_name7')
+Completed 200 OK in 118ms (Views: 23.5ms | ActiveRecord: 23.1ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 12:54:30 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_box"=>"test_name7"}}
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mItemSource Load (5.1ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE (name LIKE 'test_name7' OR short_name LIKE 'test_name7')
+Completed 200 OK in 18ms (Views: 4.7ms | ActiveRecord: 7.2ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 12:54:36 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_box"=>"test_name7", "short_name"=>"test_short_name0"}}
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mItemSource Load (2.2ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE (name LIKE 'test_name7' OR short_name LIKE 'test_name7')
+Completed 200 OK in 19ms (Views: 9.9ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 12:57:54 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_box"=>"test_name7", "short_name"=>"test_short_name0"}}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mItemSource Load (1.9ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE (short_name = 'test_short_name0')
+Completed 200 OK in 110ms (Views: 19.6ms | ActiveRecord: 18.5ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 12:58:28 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_box"=>"test_name7", "short_name"=>"test_short_name0"}}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mItemSource Load (1.7ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE (short_name = 'test_short_name0')
+Completed 200 OK in 112ms (Views: 24.5ms | ActiveRecord: 18.7ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 13:02:19 +0530
+
+SyntaxError (/home/lt/projects/erp/ERP_RAILS_APP/app/controllers/inventory_management_controller.rb:296: void value expression
+/home/lt/projects/erp/ERP_RAILS_APP/app/controllers/inventory_management_controller.rb:296: syntax error, unexpected tIDENTIFIER, expecting keyword_end):
+  app/controllers/inventory_management_controller.rb:296: void value expression
+  app/controllers/inventory_management_controller.rb:296: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+
+
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (18.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.7ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (72.3ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (2.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (53.5ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.5ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (116.1ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 13:02:45 +0530
+
+SyntaxError (/home/lt/projects/erp/ERP_RAILS_APP/app/controllers/inventory_management_controller.rb:296: void value expression):
+  app/controllers/inventory_management_controller.rb:296: void value expression
+
+
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.4ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.5ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (76.4ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.5ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (48.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.4ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.4ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (106.3ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 13:04:15 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_box"=>"test_name7", "short_name"=>"test_short_name0"}}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mItemSource Load (1.7ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE (short_name = 'test_short_name0')
+Completed 200 OK in 152ms (Views: 2.2ms | ActiveRecord: 16.4ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 13:05:26 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_box"=>"test_name7", "short_name"=>"test_short_name0"}}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mItemSource Load (1.4ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE (name LIKE 'test_name7' OR short_name LIKE 'test_name7')
+  [1m[36mItemSource Load (1.6ms)[0m  [1mSELECT "item_sources".* FROM "item_sources" WHERE (short_name = 'test_short_name0')[0m
+Completed 200 OK in 114ms (Views: 2.0ms | ActiveRecord: 20.2ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 13:06:03 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_box"=>"test_name7", "short_name"=>"test_short_name0"}}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mItemSource Load (1.4ms)[0m  [1mSELECT "item_sources".* FROM "item_sources" WHERE (name LIKE 'test_name7' OR short_name LIKE 'test_name7')[0m
+  [1m[35mItemSource Load (1.6ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE (short_name = 'test_short_name0')
+Completed 200 OK in 131ms (Views: 3.1ms | ActiveRecord: 21.8ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 13:07:08 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_box"=>"test_name7", "short_name"=>"test_short_name0"}}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mItemSource Load (2.4ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE (name LIKE 'test_name7' OR short_name LIKE 'test_name7')
+  [1m[36mItemSource Load (1.7ms)[0m  [1mSELECT "item_sources".* FROM "item_sources" WHERE (short_name = 'test_short_name0')[0m
+Completed 200 OK in 117ms (Views: 3.2ms | ActiveRecord: 20.1ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 13:07:26 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_box"=>"test_name7", "short_name"=>"test_short_name0"}}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mItemSource Load (1.7ms)[0m  [1mSELECT "item_sources".* FROM "item_sources" WHERE (name LIKE 'test_name7' OR short_name LIKE 'test_name7')[0m
+  [1m[35mItemSource Load (2.1ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE (short_name = 'test_short_name0')
+Completed 200 OK in 100ms (Views: 2.7ms | ActiveRecord: 18.6ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 13:08:48 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_box"=>"test_name7", "short_name"=>"test_short_name0"}}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mItemSource Load (1.8ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE (name LIKE 'test_name7' OR short_name LIKE 'test_name7')
+  [1m[36mItemSource Load (1.5ms)[0m  [1mSELECT "item_sources".* FROM "item_sources" WHERE (short_name = 'test_short_name0')[0m
+Completed 200 OK in 98ms (Views: 2.3ms | ActiveRecord: 18.2ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 13:10:24 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_box"=>"test_name7", "short_name"=>"test_short_name0"}}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mItemSource Load (1.7ms)[0m  [1mSELECT "item_sources".* FROM "item_sources" WHERE (name LIKE 'test_name7' OR short_name LIKE 'test_name7')[0m
+  [1m[35mItemSource Load (1.2ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE (short_name = 'test_short_name0')
+Completed 200 OK in 95ms (Views: 2.1ms | ActiveRecord: 16.9ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 13:12:48 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_box"=>"7", "short_name"=>"test_short_name0"}}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mItemSource Load (1.1ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE "item_sources"."id" = $1  [["id", 7]]
+  [1m[36mItemSource Load (1.6ms)[0m  [1mSELECT "item_sources".* FROM "item_sources" WHERE (short_name = 'test_short_name0')[0m
+Completed 200 OK in 92ms (Views: 2.5ms | ActiveRecord: 16.2ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 13:13:00 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_box"=>"7", "short_name"=>""}}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mItemSource Load (1.0ms)[0m  [1mSELECT "item_sources".* FROM "item_sources" WHERE "item_sources"."id" = $1[0m  [["id", 7]]
+Completed 200 OK in 11ms (Views: 2.3ms | ActiveRecord: 2.0ms)
+  [1m[36mListing Load (64.4ms)[0m  [1mSELECT  "listings".* FROM "listings"  ORDER BY "listings"."id" DESC LIMIT 1[0m
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 13:18:00 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_box"=>"7", "short_name"=>"test_name7"}}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mItemSource Load (0.8ms)[0m  [1mSELECT "item_sources".* FROM "item_sources" WHERE "item_sources"."id" = $1[0m  [["id", 7]]
+  [1m[35mItemSource Load (1.7ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE (short_name = 'test_name7')
+Completed 200 OK in 90ms (Views: 1.9ms | ActiveRecord: 20.0ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 13:18:42 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_box"=>"7", "short_name"=>"test_short_name7"}}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mItemSource Load (1.0ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE "item_sources"."id" = $1  [["id", 7]]
+  [1m[36mItemSource Load (1.2ms)[0m  [1mSELECT "item_sources".* FROM "item_sources" WHERE (short_name = 'test_short_name7')[0m
+Completed 200 OK in 21ms (Views: 2.4ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-20 13:19:00 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"1", "search_item_source"=>{"search_box"=>"test_name0", "short_name"=>"test_short_name7"}}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mItemSource Load (3.9ms)[0m  [1mSELECT "item_sources".* FROM "item_sources" WHERE (name LIKE 'test_name0' OR short_name LIKE 'test_name0')[0m
+  [1m[35mItemSource Load (1.3ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE (short_name = 'test_short_name7')
+Completed 200 OK in 19ms (Views: 2.7ms | ActiveRecord: 6.3ms)
+  [1m[35mListing Load (2.0ms)[0m  SELECT  "listings".* FROM "listings"  ORDER BY "listings"."id" DESC LIMIT 1
+  [1m[36mListing Load (1.6ms)[0m  [1mSELECT "listings".* FROM "listings"[0m
+
+
+Started POST "/search_listing" for 127.0.0.1 at 2017-11-20 13:24:58 +0530
+Processing by InventoryManagementController#search_listing as */*
+  Parameters: {"user_id"=>"1", "search_listing"=>{"search_box"=>"1"}}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mItemSource Load (0.9ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE "item_sources"."id" = $1  [["id", 1]]
+Completed 200 OK in 76ms (Views: 0.6ms | ActiveRecord: 14.4ms)
+  [1m[35mListing Load (48.7ms)[0m  SELECT "listings".* FROM "listings" WHERE (1)
+  [1m[36mListing Load (1.0ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1[0m  [["id", 1]]
+  [1m[35mListing Load (35.2ms)[0m  SELECT "listings".* FROM "listings"
+  [1m[36mListing Load (1.5ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1[0m  [["id", 1]]
+  [1m[35mListing Load (1.9ms)[0m  SELECT "listings".* FROM "listings"
+  [1m[36mListing Load (1.7ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1[0m  [["id", 1]]
+
+
+Started POST "/search_listing" for 127.0.0.1 at 2017-11-20 13:26:06 +0530
+Processing by InventoryManagementController#search_listing as */*
+  Parameters: {"user_id"=>"1", "search_listing"=>{"search_box"=>"1"}}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mItemSource Load (0.8ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE "item_sources"."id" = $1  [["id", 1]]
+Completed 200 OK in 96ms (Views: 0.6ms | ActiveRecord: 14.9ms)
+
+
+Started POST "/search_listing" for 127.0.0.1 at 2017-11-20 13:26:57 +0530
+Processing by InventoryManagementController#search_listing as */*
+  Parameters: {"user_id"=>"1", "search_listing"=>{"search_box"=>"1"}}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mItemSource Load (1.1ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE "item_sources"."id" = $1  [["id", 1]]
+Completed 200 OK in 72ms (Views: 0.6ms | ActiveRecord: 13.8ms)
+
+
+Started POST "/search_listing" for 127.0.0.1 at 2017-11-20 13:28:05 +0530
+Processing by InventoryManagementController#search_listing as */*
+  Parameters: {"user_id"=>"1", "search_listing"=>{"search_box"=>"1"}}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mListing Load (1.3ms)[0m  SELECT "listings".* FROM "listings" WHERE "listings"."id" = $1  [["id", 1]]
+Completed 200 OK in 126ms (Views: 1.2ms | ActiveRecord: 15.9ms)
+
+
+Started POST "/search_listing" for 127.0.0.1 at 2017-11-20 13:28:37 +0530
+Processing by InventoryManagementController#search_listing as */*
+  Parameters: {"user_id"=>"1", "search_listing"=>{"search_box"=>"1"}}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mListing Load (1.1ms)[0m  SELECT "listings".* FROM "listings" WHERE "listings"."id" = $1  [["id", 1]]
+Completed 200 OK in 103ms (Views: 3.7ms | ActiveRecord: 16.9ms)
+  [1m[35mListing Load (1.6ms)[0m  SELECT "listings".* FROM "listings"
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (5.6ms)[0m  UPDATE "listings" SET "title" = $1, "make" = $2, "model" = $3, "description" = $4, "updated_at" = $5 WHERE "listings"."id" = $6  [["title", "title_0"], ["make", "make_0"], ["model", "model_0"], ["description", "description_0"], ["updated_at", "2017-11-20 08:01:24.519194"], ["id", 1]]
+  [1m[36m (48.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mUPDATE "listings" SET "title" = $1, "make" = $2, "model" = $3, "description" = $4, "updated_at" = $5 WHERE "listings"."id" = $6[0m  [["title", "title_1"], ["make", "make_1"], ["model", "model_1"], ["description", "description_1"], ["updated_at", "2017-11-20 08:01:24.602335"], ["id", 3]]
+  [1m[35m (5.3ms)[0m  COMMIT
+  [1m[36mListing Load (1.7ms)[0m  [1mSELECT "listings".* FROM "listings"[0m
+
+
+Started POST "/search_listing" for 127.0.0.1 at 2017-11-20 13:32:19 +0530
+Processing by InventoryManagementController#search_listing as */*
+  Parameters: {"user_id"=>"1", "search_listing"=>{"search_box"=>"description_1", "title"=>"title_0"}}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mListing Load (4.2ms)[0m  SELECT "listings".* FROM "listings" WHERE (title LIKE 'description_1' OR make LIKE 'description_1' OR description)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 5.6ms)
+
+ActiveRecord::StatementInvalid (PG::DatatypeMismatch: ERROR:  argument of OR must be type boolean, not type text
+LINE 1: ...E 'description_1' OR make LIKE 'description_1' OR descriptio...
+                                                             ^
+: SELECT "listings".* FROM "listings" WHERE (title LIKE 'description_1' OR make LIKE 'description_1' OR description)):
+  app/controllers/inventory_management_controller.rb:217:in `flatten'
+  app/controllers/inventory_management_controller.rb:217:in `search_listing'
+
+
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.4ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.6ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.4ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.3ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (41.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (80.9ms)
+  [1m[35mListing Load (12.5ms)[0m  SELECT "listings".* FROM "listings" WHERE (title LIKE 'description_1' OR make LIKE 'description_1' OR description)
+
+
+Started POST "/search_listing" for 127.0.0.1 at 2017-11-20 13:34:46 +0530
+Processing by InventoryManagementController#search_listing as */*
+  Parameters: {"user_id"=>"1", "search_listing"=>{"search_box"=>"1", "title"=>"title_0"}}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mListing Load (1.3ms)[0m  SELECT "listings".* FROM "listings" WHERE "listings"."id" = $1  [["id", 1]]
+  [1m[36mListing Load (0.9ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE (title = 'title_0')[0m
+Completed 200 OK in 15ms (Views: 1.9ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/search_listing" for 127.0.0.1 at 2017-11-20 13:34:55 +0530
+Processing by InventoryManagementController#search_listing as */*
+  Parameters: {"user_id"=>"1", "search_listing"=>{"search_box"=>"2", "title"=>"title_0"}}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mListing Load (1.1ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1[0m  [["id", 2]]
+  [1m[35mListing Load (1.2ms)[0m  SELECT "listings".* FROM "listings" WHERE (title = 'title_0')
+Completed 200 OK in 14ms (Views: 1.8ms | ActiveRecord: 3.4ms)
+  [1m[36mListing Load (1.6ms)[0m  [1mSELECT "listings".* FROM "listings"[0m
+
+
+Started POST "/search_listing" for 127.0.0.1 at 2017-11-20 13:36:22 +0530
+Processing by InventoryManagementController#search_listing as */*
+  Parameters: {"user_id"=>"1", "search_listing"=>{"search_box"=>"3", "title"=>"title_0"}}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mListing Load (1.5ms)[0m  SELECT "listings".* FROM "listings" WHERE "listings"."id" = $1  [["id", 3]]
+  [1m[36mListing Load (1.5ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE (title = 'title_0')[0m
+Completed 200 OK in 17ms (Views: 2.8ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/search_listing" for 127.0.0.1 at 2017-11-20 13:37:03 +0530
+Processing by InventoryManagementController#search_listing as */*
+  Parameters: {"user_id"=>"1", "search_listing"=>{"search_box"=>"description_1", "title"=>"title_0"}}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mListing Load (1.9ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE (title LIKE 'description_1' OR make LIKE 'description_1' OR description LIKE 'description_1')[0m
+  [1m[35mListing Load (1.6ms)[0m  SELECT "listings".* FROM "listings" WHERE (title = 'title_0')
+Completed 200 OK in 94ms (Views: 3.0ms | ActiveRecord: 16.4ms)
+
+
+Started POST "/search_listing" for 127.0.0.1 at 2017-11-20 13:39:01 +0530
+Processing by InventoryManagementController#search_listing as */*
+  Parameters: {"user_id"=>"1", "search_listing"=>{"search_box"=>"description_1", "title"=>"title_0", "model"=>"model_1"}}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 137ms (ActiveRecord: 9.7ms)
+
+NameError (undefined local variable or method `search_model' for #<InventoryManagementController:0x007f961050b7b8>
+Did you mean?  search_make):
+  app/controllers/inventory_management_controller.rb:218:in `search_listing'
+
+
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.2ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.5ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.2ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (107.5ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.4ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (45.5ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (92.2ms)
+
+
+Started POST "/search_listing" for 127.0.0.1 at 2017-11-20 13:39:35 +0530
+Processing by InventoryManagementController#search_listing as */*
+  Parameters: {"user_id"=>"1", "search_listing"=>{"search_box"=>"description_1", "title"=>"title_0", "model"=>"model_1"}}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mListing Load (1.6ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE (title LIKE 'description_1' OR make LIKE 'description_1' OR model LIKE 'description_1' OR description LIKE 'description_1')[0m
+  [1m[35mListing Load (1.6ms)[0m  SELECT "listings".* FROM "listings" WHERE (title = 'title_0')
+  [1m[36mListing Load (1.0ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE (model = 'model_1')[0m
+Completed 200 OK in 129ms (Views: 2.7ms | ActiveRecord: 17.9ms)
+  [1m[35mInventoryItem Load (108.4ms)[0m  SELECT "inventory_items".* FROM "inventory_items"
+  [1m[36mInventoryItem Load (22.3ms)[0m  [1mSELECT  "inventory_items".* FROM "inventory_items"  ORDER BY "inventory_items"."id" DESC LIMIT 1[0m
+  [1m[35mInventoryItem Load (2.1ms)[0m  SELECT "inventory_items".* FROM "inventory_items"
+  [1m[36mInventoryItem Load (1.9ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items"[0m
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36mSQL (25.0ms)[0m  [1mUPDATE "inventory_items" SET "icc" = $1, "serial" = $2, "make" = $3, "model" = $4, "location" = $5, "updated_at" = $6 WHERE "inventory_items"."id" = $7[0m  [["icc", "text_icc_3{index}"], ["serial", "text_serial_3{index}"], ["make", "text_make_3{index}"], ["model", "text_model_3{index}"], ["location", "text_location_3{index}"], ["updated_at", "2017-11-20 08:21:30.845951"], ["id", 7]]
+  [1m[35m (66.2ms)[0m  COMMIT
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  UPDATE "inventory_items" SET "icc" = $1, "serial" = $2, "make" = $3, "model" = $4, "location" = $5, "updated_at" = $6 WHERE "inventory_items"."id" = $7  [["icc", "text_icc_3{index}"], ["serial", "text_serial_3{index}"], ["make", "text_make_3{index}"], ["model", "text_model_3{index}"], ["location", "text_location_3{index}"], ["updated_at", "2017-11-20 08:21:31.010711"], ["id", 8]]
+  [1m[36m (21.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "inventory_items" SET "icc" = $1, "serial" = $2, "make" = $3, "model" = $4, "location" = $5, "updated_at" = $6 WHERE "inventory_items"."id" = $7[0m  [["icc", "text_icc_3{index}"], ["serial", "text_serial_3{index}"], ["make", "text_make_3{index}"], ["model", "text_model_3{index}"], ["location", "text_location_3{index}"], ["updated_at", "2017-11-20 08:21:31.043452"], ["id", 9]]
+  [1m[35m (6.8ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  UPDATE "inventory_items" SET "icc" = $1, "serial" = $2, "make" = $3, "model" = $4, "location" = $5, "updated_at" = $6 WHERE "inventory_items"."id" = $7  [["icc", "text_icc_3{index}"], ["serial", "text_serial_3{index}"], ["make", "text_make_3{index}"], ["model", "text_model_3{index}"], ["location", "text_location_3{index}"], ["updated_at", "2017-11-20 08:21:31.059847"], ["id", 10]]
+  [1m[36m (25.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "inventory_items" SET "icc" = $1, "serial" = $2, "make" = $3, "model" = $4, "location" = $5, "updated_at" = $6 WHERE "inventory_items"."id" = $7[0m  [["icc", "text_icc_3{index}"], ["serial", "text_serial_3{index}"], ["make", "text_make_3{index}"], ["model", "text_model_3{index}"], ["location", "text_location_3{index}"], ["updated_at", "2017-11-20 08:21:31.118104"], ["id", 11]]
+  [1m[35m (6.9ms)[0m  COMMIT
+  [1m[36mInventoryItem Load (1.5ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items"[0m
+  [1m[35mInventoryItem Load (1.6ms)[0m  SELECT "inventory_items".* FROM "inventory_items"
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  UPDATE "inventory_items" SET "icc" = $1, "serial" = $2, "make" = $3, "model" = $4, "location" = $5, "updated_at" = $6 WHERE "inventory_items"."id" = $7  [["icc", "text_icc_30"], ["serial", "text_serial_30"], ["make", "text_make_30"], ["model", "text_model_30"], ["location", "text_location_30"], ["updated_at", "2017-11-20 08:23:05.457594"], ["id", 7]]
+  [1m[36m (26.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE "inventory_items" SET "icc" = $1, "serial" = $2, "make" = $3, "model" = $4, "location" = $5, "updated_at" = $6 WHERE "inventory_items"."id" = $7[0m  [["icc", "text_icc_31"], ["serial", "text_serial_31"], ["make", "text_make_31"], ["model", "text_model_31"], ["location", "text_location_31"], ["updated_at", "2017-11-20 08:23:05.494951"], ["id", 8]]
+  [1m[35m (6.9ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE "inventory_items" SET "icc" = $1, "serial" = $2, "make" = $3, "model" = $4, "location" = $5, "updated_at" = $6 WHERE "inventory_items"."id" = $7  [["icc", "text_icc_32"], ["serial", "text_serial_32"], ["make", "text_make_32"], ["model", "text_model_32"], ["location", "text_location_32"], ["updated_at", "2017-11-20 08:23:05.509457"], ["id", 9]]
+  [1m[36m (9.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "inventory_items" SET "icc" = $1, "serial" = $2, "make" = $3, "model" = $4, "location" = $5, "updated_at" = $6 WHERE "inventory_items"."id" = $7[0m  [["icc", "text_icc_33"], ["serial", "text_serial_33"], ["make", "text_make_33"], ["model", "text_model_33"], ["location", "text_location_33"], ["updated_at", "2017-11-20 08:23:05.527045"], ["id", 10]]
+  [1m[35m (8.6ms)[0m  COMMIT
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE "inventory_items" SET "icc" = $1, "serial" = $2, "make" = $3, "model" = $4, "location" = $5, "updated_at" = $6 WHERE "inventory_items"."id" = $7  [["icc", "text_icc_34"], ["serial", "text_serial_34"], ["make", "text_make_34"], ["model", "text_model_34"], ["location", "text_location_34"], ["updated_at", "2017-11-20 08:23:05.543668"], ["id", 11]]
+  [1m[36m (5.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mInventoryItem Load (2.0ms)[0m  SELECT "inventory_items".* FROM "inventory_items"
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-20 14:05:06 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"1", "search_listing"=>{"search_box"=>"2", "icc"=>"text_icc_30"}}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 201 Created in 100ms (Views: 0.7ms | ActiveRecord: 37.6ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-20 14:05:26 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"1", "search_inventory_item"=>{"search_box"=>"2", "icc"=>"text_icc_30"}}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mListing Load (1.0ms)[0m  SELECT "listings".* FROM "listings" WHERE "listings"."id" = $1  [["id", 2]]
+  [1m[36mListing Load (101.2ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE (icc = 'text_icc_30')[0m
+Completed 500 Internal Server Error in 143ms (ActiveRecord: 105.5ms)
+
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column "icc" does not exist
+LINE 1: SELECT "listings".* FROM "listings" WHERE (icc = 'text_icc_3...
+                                                   ^
+: SELECT "listings".* FROM "listings" WHERE (icc = 'text_icc_30')):
+  app/controllers/inventory_management_controller.rb:108:in `flatten'
+  app/controllers/inventory_management_controller.rb:108:in `search_inventory_item'
+
+
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.4ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.5ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (63.2ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (42.4ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.3ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (114.1ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-20 14:06:56 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"1", "search_inventory_item"=>{"search_box"=>"2", "icc"=>"text_icc_30"}}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mInventoryItem Load (1.5ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items" WHERE "inventory_items"."id" = $1[0m  [["id", 2]]
+  [1m[35mInventoryItem Load (1.3ms)[0m  SELECT "inventory_items".* FROM "inventory_items" WHERE (icc = 'text_icc_30')
+Completed 200 OK in 134ms (Views: 2.4ms | ActiveRecord: 19.5ms)
+  [1m[36mInventoryItem Load (1.4ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items" WHERE "inventory_items"."id" = $1[0m  [["id", 2]]
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-20 14:08:58 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"1", "search_inventory_item"=>{"search_box"=>"7", "icc"=>"text_icc_30"}}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mInventoryItem Load (1.3ms)[0m  SELECT "inventory_items".* FROM "inventory_items" WHERE "inventory_items"."id" = $1  [["id", 7]]
+  [1m[36mInventoryItem Load (1.5ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items" WHERE (icc = 'text_icc_30')[0m
+Completed 200 OK in 17ms (Views: 2.3ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-20 14:09:12 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"1", "search_inventory_item"=>{"search_box"=>"8", "icc"=>"text_icc_30"}}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mInventoryItem Load (1.7ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items" WHERE "inventory_items"."id" = $1[0m  [["id", 8]]
+  [1m[35mInventoryItem Load (2.0ms)[0m  SELECT "inventory_items".* FROM "inventory_items" WHERE (icc = 'text_icc_30')
+Completed 200 OK in 21ms (Views: 5.0ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-20 14:09:26 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"1", "search_inventory_item"=>{"search_box"=>"text_serial_31", "icc"=>"text_icc_30"}}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mInventoryItem Load (2.2ms)[0m  SELECT "inventory_items".* FROM "inventory_items" WHERE (icc LIKE 'text_serial_31' OR serial LIKE 'text_serial_31' OR make LIKE 'text_serial_31' OR model LIKE 'text_serial_31' OR location LIKE 'text_serial_31')
+  [1m[36mInventoryItem Load (1.5ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items" WHERE (icc = 'text_icc_30')[0m
+Completed 200 OK in 16ms (Views: 3.3ms | ActiveRecord: 4.9ms)
