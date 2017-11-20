@@ -13846,3 +13846,6 @@ Processing by InventoryManagementController#create_item_source as */*
   [1m[36m (0.5ms)[0m  [1mBEGIN[0m
   [1m[35m (0.6ms)[0m  COMMIT
 Completed 200 OK in 126ms (Views: 0.9ms | ActiveRecord: 93.6ms)
+  [1m[36mItemSource Load (14.2ms)[0m  [1mSELECT  "item_sources".* FROM "item_sources"  ORDER BY "item_sources"."id" DESC LIMIT 1[0m
+  [1m[35mItemSource Load (1.8ms)[0m  SELECT "item_sources".* FROM "item_sources"
+  [1m[36mItemSource Load (1.8ms)[0m  [1mSELECT  "item_sources".* FROM "item_sources"  ORDER BY "item_sources"."id" ASC LIMIT 1[0m
