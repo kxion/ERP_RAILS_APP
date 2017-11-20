@@ -8,7 +8,7 @@ class SalesOrdersController < ApplicationController
         @sales_order = SalesOrder.create(sales_order_params)
         @sales_order.sales_user_id = @user.id
         @sales_order.save
-        render :json=> {:status => true,:message => "Sales Order created!"}, :status=>200
+        render :json=> {:status => true,:message => "Sales Order created!", :sales_order_id => @sales_order.id }, :status=>200
       else
         render :json=> {:status => false,:message => "Something Went Wrong!"}, :status=>201
       end
