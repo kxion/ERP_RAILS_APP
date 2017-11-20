@@ -1,6 +1,17 @@
 class SalesOrdersController < ApplicationController
     before_action :set_sales_order, only: [:show, :edit_form, :update]
-    before_action :set_delete_all_sales_order, only: [:delete_all]
+    # before_action :set_delete_all_sales_order, only: [:delete_all]
+
+    def create_sales_order
+      if params[:user_id].present?
+        @user = User.find_by(id: params[:user_id])
+        @sales_order = SalesOrder.create(sales_order_params)
+        @sales_order.save
+        render :json=> {:status => true,:message => "Sales Order created!"}, :status=>200
+      else
+        render :json=> {:status => false,:message => "Something Went Wrong!"}, :status=>201
+      end
+    end
 
     def index
       if params[:search_text].present?
@@ -27,13 +38,38 @@ class SalesOrdersController < ApplicationController
       end
     end
 
-    def delete_all
-      @sales_order_ids.each do |id|
-        sales_order = SalesOrder.find(id.to_i)
-        sales_order.update_attribute(:is_active, false)
+    # def delete_all
+    #   @sales_order_ids.each do |id|
+    #     sales_order = SalesOrder.find(id.to_i)
+    #     sales_order.update_attribute(:is_active, false)
+    #   end
+    #   render json: {status: :ok}
+    # end
+
+  def sales_order_delete
+    if params[:user_id].present?
+      @user = User.find_by(id: params[:user_id])
+      @split_id = params[:sales_order_id]
+      @sales_order_id = @split_id.split(',')
+      if @sales_order_id.present?
+        begin
+          @sales_order_id.each do |id|
+            @sales_order = SalesOrder.find(id)
+            if @sales_order.present?
+              @sales_order.delete
+            end
+          end
+          render :json=> {:status => true,:message => "Sales Order deleted!"}, :status=>200
+        rescue Exception => e
+          render :json=> {:status => true,:message => "No data!"}, :status=>200
+        end
+      else
+        render :json=> {:status => true,:message => "No data!"}, :status=>200
       end
-      render json: {status: :ok}
+    else
+      render :json=> {:status => false,:message => "Something Went Wrong!"}, :status=>201
     end
+  end
 
     def refresh
       current_user.refresh_orders

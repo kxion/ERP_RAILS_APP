@@ -37,8 +37,9 @@ Rails.application.routes.draw do
     end
     resources :sales_orders do
       collection do
+        post 'create_sales_order'
+        post 'sales_order_delete'
         get 'edit_form'
-        get 'delete_all'
         get 'refresh'
         get 'get_sales_orders'
       end
@@ -210,6 +211,7 @@ Rails.application.routes.draw do
     post '/delete_inventory_item' => 'inventory_management#delete_inventory_item'
     post '/delete_listing' => 'inventory_management#delete_listing'
     post '/delete_item_source' => 'inventory_management#delete_item_source'
+    # search
 
     
     # default integration custom actions paths

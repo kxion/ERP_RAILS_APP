@@ -14,7 +14,8 @@ class AccountsController < ApplicationController
   def create
     account = Account.new(account_params)
     if account.save
-      render status: 200, json: { account_id: account.id }
+      # render status: 200, json: { :message => "No data!", account_id: account.id }
+      render :json=> {:status => true,:message => "Account Created!"}, :status=>200
     else
       render status: 200, json: { message: account.errors.full_messages.first }
     end

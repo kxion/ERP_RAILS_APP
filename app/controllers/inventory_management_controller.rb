@@ -86,6 +86,10 @@ class InventoryManagementController < ApplicationController
 		end
 	end
 
+	# def search_inventory_item
+		
+	# end
+
 	def get_listing
 		if params[:user_id].present?
 			@user = User.find_by(id: params[:user_id])
