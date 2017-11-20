@@ -87,7 +87,7 @@ class SalesOrdersController < ApplicationController
           render :json=> {:status => true,:message => "No data!"}, :status=>200
         end
       else
-        render :json=> {:status => true,:message => "Something Went Wrong!"}, :status=>201
+        render :json=> {:status => true,:message => "Something Went Wrong!", :sales_order => @sales_order}, :status=>201
       end
       # salesOrders = SalesOrder.sales_sales_orders(current_user)
       # render status: 200, json: SalesOrder.get_json_sales_orders_dropdown(salesOrders)
