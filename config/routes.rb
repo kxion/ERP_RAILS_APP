@@ -41,7 +41,7 @@ Rails.application.routes.draw do
         post 'sales_order_delete'
         get 'edit_form'
         get 'refresh'
-        get 'get_sales_orders'
+        post 'get_sales_orders'
       end
     end
     resources :sales_order_invoices do

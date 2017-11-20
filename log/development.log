@@ -15374,3 +15374,76 @@ Processing by InventoryManagementController#search_inventory_item as */*
   [1m[35mInventoryItem Load (2.2ms)[0m  SELECT "inventory_items".* FROM "inventory_items" WHERE (icc LIKE 'text_serial_31' OR serial LIKE 'text_serial_31' OR make LIKE 'text_serial_31' OR model LIKE 'text_serial_31' OR location LIKE 'text_serial_31')
   [1m[36mInventoryItem Load (1.5ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items" WHERE (icc = 'text_icc_30')[0m
 Completed 200 OK in 16ms (Views: 3.3ms | ActiveRecord: 4.9ms)
+  [1m[36mSalesOrder Load (22.9ms)[0m  [1mSELECT  "sales_orders".* FROM "sales_orders"  ORDER BY "sales_orders"."id" DESC LIMIT 1[0m
+  [1m[35mUser Load (2.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSalesOrder Load (2.6ms)[0m  [1mSELECT "sales_orders".* FROM "sales_orders"[0m
+  [1m[35mSalesOrder Load (1.3ms)[0m  SELECT "sales_orders".* FROM "sales_orders" WHERE "sales_orders"."sales_user_id" = $1  [["sales_user_id", 1]]
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-20 15:40:36 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (2.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (6.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (172.5ms)
+Completed 200 OK in 761ms (Views: 609.9ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/assets/application-7377024958ba493eaaac8c984a5eadbb.css?body=1" for 127.0.0.1 at 2017-11-20 15:40:37 +0530
+
+
+Started GET "/assets/jquery_ujs-b58be681f2702254e79c46cdcbbc9616.js?body=1" for 127.0.0.1 at 2017-11-20 15:40:37 +0530
+
+
+Started GET "/assets/application-47f576ff989e996390ab5dd2b5544dc9.js?body=1" for 127.0.0.1 at 2017-11-20 15:40:38 +0530
+
+
+Started GET "/assets/turbolinks-ec43e9d221200f76649ada6a93a32e1b.js?body=1" for 127.0.0.1 at 2017-11-20 15:40:38 +0530
+
+
+Started GET "/assets/jquery-06e29fe56831942b4f21ce49e45e1429.js?body=1" for 127.0.0.1 at 2017-11-20 15:40:38 +0530
+
+
+Started GET "/sadfasd" for 127.0.0.1 at 2017-11-20 15:40:42 +0530
+
+ActionController::RoutingError (No route matches [GET] "/sadfasd"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /home/lt/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/lt/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/lt/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.6ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (66.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (18.1ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (346.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.4ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.7ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.4ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (88.7ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.6ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (161.8ms)

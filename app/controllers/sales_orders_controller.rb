@@ -6,6 +6,7 @@ class SalesOrdersController < ApplicationController
       if params[:user_id].present?
         @user = User.find_by(id: params[:user_id])
         @sales_order = SalesOrder.create(sales_order_params)
+        @sales_order.sales_user_id = @user.id
         @sales_order.save
         render :json=> {:status => true,:message => "Sales Order created!"}, :status=>200
       else
@@ -77,8 +78,19 @@ class SalesOrdersController < ApplicationController
     end
 
     def get_sales_orders
-      salesOrders = SalesOrder.sales_sales_orders(current_user)
-      render status: 200, json: SalesOrder.get_json_sales_orders_dropdown(salesOrders)
+      if params[:user_id].present?
+        @user = User.find_by(id: params[:user_id])
+        @sales_order = SalesOrder.where(sales_user_id: @user.id)
+        if @sales_order.present?
+          render :json=> {:status => true,:message => "Sales Order list!"}, :status=>200
+        else
+          render :json=> {:status => true,:message => "No data!"}, :status=>200
+        end
+      else
+        render :json=> {:status => true,:message => "Something Went Wrong!"}, :status=>201
+      end
+      # salesOrders = SalesOrder.sales_sales_orders(current_user)
+      # render status: 200, json: SalesOrder.get_json_sales_orders_dropdown(salesOrders)
     end
 
     private
