@@ -47,30 +47,56 @@ class SalesOrdersController < ApplicationController
     #   render json: {status: :ok}
     # end
 
-  def sales_order_delete
-    if params[:user_id].present?
-      @user = User.find_by(id: params[:user_id])
-      @split_id = params[:sales_order_id]
-      @sales_order_id = @split_id.split(',')
-      if @sales_order_id.present?
-        begin
-          @sales_order_id.each do |id|
-            @sales_order = SalesOrder.find(id)
-            if @sales_order.present?
-              @sales_order.delete
+    def search_sales_orders
+      if params[:user_id].present?
+        @user = User.find_by(id: params[:user_id])
+        array_search = []
+        if params[:search_sales_orders].present?
+          sales_order_id = params[:search_sales_orders][:id]
+          search_id = SalesOrder.where(id: sales_order_id.to_i) if sales_order_id.present?
+          array_search << search_id
+          sales_order_uid = params[:search_sales_orders][:uid]
+          search_name = SalesOrder.where(uid: sales_order_uid.to_i) if sales_order_uid.present?
+          array_search << search_name
+          sales_order_contact_user_id = params[:search_sales_orders][:contact_user_id]
+          search_name_user_id = SalesOrder.where(contact_user_id: sales_order_contact_user_id.to_i) if sales_order_contact_user_id.present?
+          array_search << search_name_user_id
+          sales_order_customer_user_id = params[:search_sales_orders][:customer_user_id]
+          search_name_sales_order_customer_user_id = SalesOrder.where(customer_user_id: sales_order_customer_user_id.to_i) if sales_order_customer_user_id.present?
+          total = array_search << search_name_sales_order_customer_user_id
+          render :json=> {:status => true,:message => "Sales Order search list", :search => total.flatten.uniq.reject(&:blank?)}, :status=>200
+        else
+          render :json=> {:status => false,:message => "Something Went Wrong!"}, :status=>201
+        end
+      else
+        render :json=> {:status => false,:message => "Something Went Wrong!"}, :status=>201
+      end
+    end
+
+    def sales_order_delete
+      if params[:user_id].present?
+        @user = User.find_by(id: params[:user_id])
+        @split_id = params[:sales_order_id]
+        @sales_order_id = @split_id.split(',')
+        if @sales_order_id.present?
+          begin
+            @sales_order_id.each do |id|
+              @sales_order = SalesOrder.find(id)
+              if @sales_order.present?
+                @sales_order.delete
+              end
             end
+            render :json=> {:status => true,:message => "Sales Order deleted!"}, :status=>200
+          rescue Exception => e
+            render :json=> {:status => true,:message => "No data!"}, :status=>200
           end
-          render :json=> {:status => true,:message => "Sales Order deleted!"}, :status=>200
-        rescue Exception => e
+        else
           render :json=> {:status => true,:message => "No data!"}, :status=>200
         end
       else
-        render :json=> {:status => true,:message => "No data!"}, :status=>200
+        render :json=> {:status => false,:message => "Something Went Wrong!"}, :status=>201
       end
-    else
-      render :json=> {:status => false,:message => "Something Went Wrong!"}, :status=>201
     end
-  end
 
     def refresh
       current_user.refresh_orders

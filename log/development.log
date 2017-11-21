@@ -16016,3 +16016,169 @@ Content-Transfer-Encoding: 7bit
 <p><a href="http://localhost:3000/auth_users/confirmation?confirmation_token=5D5-BVawETqTyqVoTRGM">Confirm my account</a></p>
 
 Completed 200 OK in 4008ms (Views: 2.4ms | ActiveRecord: 127.3ms)
+  [1m[36mSalesOrder Load (90.1ms)[0m  [1mSELECT "sales_orders".* FROM "sales_orders"[0m
+  [1m[35mSalesOrder Load (63.1ms)[0m  SELECT "sales_orders".* FROM "sales_orders" WHERE (1)
+  [1m[36mSalesOrder Load (2.1ms)[0m  [1mSELECT "sales_orders".* FROM "sales_orders" WHERE (1)[0m
+  [1m[35mSalesOrder Load (2.1ms)[0m  SELECT "sales_orders".* FROM "sales_orders" WHERE "sales_orders"."id" = $1  [["id", 1]]
+  [1m[36mSalesOrder Load (1.6ms)[0m  [1mSELECT "sales_orders".* FROM "sales_orders" WHERE "sales_orders"."id" = $1[0m  [["id", 1]]
+
+
+Started POST "/auth_users.json" for 127.0.0.1 at 2017-11-21 13:14:26 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (60.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Users::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"sssssasad@yopmail.com", "first_name"=>"sda", "last_name"=>"asdas", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36mUser Exists (31.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'sssssasad@yopmail.com' LIMIT 1[0m
+  [1m[35mSQL (23.8ms)[0m  INSERT INTO "users" ("role", "email", "first_name", "last_name", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["role", "Sales"], ["email", "sssssasad@yopmail.com"], ["first_name", "sda"], ["last_name", "asdas"], ["encrypted_password", "$2a$11$Eo9Urc7oCON8SrUprx88Pe3ggdeeDuZBw/qphCA4hEsgX53vKK55i"], ["created_at", "2017-11-21 07:44:28.053712"], ["updated_at", "2017-11-21 07:44:28.053712"], ["confirmation_token", "gXcXuBmRa6mUmWAKzjsg"], ["confirmation_sent_at", "2017-11-21 07:44:28.054814"]]
+  [1m[36mMarketplace Load (5.9ms)[0m  [1mSELECT "marketplaces".* FROM "marketplaces"[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "accounts" ("user_id", "title", "marketplace_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["user_id", 12], ["title", "Etsy"], ["marketplace_id", 1], ["created_at", "2017-11-21 07:44:28.193450"], ["updated_at", "2017-11-21 07:44:28.193450"]]
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "accounts" ("user_id", "title", "marketplace_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 12], ["title", "Amazon"], ["marketplace_id", 2], ["created_at", "2017-11-21 07:44:28.200621"], ["updated_at", "2017-11-21 07:44:28.200621"]]
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "accounts" ("user_id", "title", "marketplace_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["user_id", 12], ["title", "eBay"], ["marketplace_id", 3], ["created_at", "2017-11-21 07:44:28.205334"], ["updated_at", "2017-11-21 07:44:28.205334"]]
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "accounts" ("user_id", "title", "marketplace_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 12], ["title", "Shopify"], ["marketplace_id", 4], ["created_at", "2017-11-21 07:44:28.209732"], ["updated_at", "2017-11-21 07:44:28.209732"]]
+WARNING: User#current is nil, are you including SentientController on your ApplicationController?
+WARNING: User#current is nil, are you including SentientController on your ApplicationController?
+  [1m[35mSQL (1.9ms)[0m  INSERT INTO "acc_accounts" ("acc_code", "name", "acc_type", "description", "sales_user_id", "default_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["acc_code", "1001"], ["name", "Receivables"], ["acc_type", "Profit/Loss"], ["description", "Amount received through Invoices"], ["sales_user_id", 12], ["default_type", "CreateInvoice"], ["created_at", "2017-11-21 07:44:28.264743"], ["updated_at", "2017-11-21 07:44:28.264743"]]
+WARNING: User#current is nil, are you including SentientController on your ApplicationController?
+WARNING: User#current is nil, are you including SentientController on your ApplicationController?
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "acc_accounts" ("acc_code", "name", "acc_type", "description", "sales_user_id", "default_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["acc_code", "1002"], ["name", "Payables"], ["acc_type", "Profit/Loss"], ["description", "Amount Payed to customers like Cheque and Returns"], ["sales_user_id", 12], ["default_type", "CreateReturnWizard"], ["created_at", "2017-11-21 07:44:28.274394"], ["updated_at", "2017-11-21 07:44:28.274394"]]
+  [1m[35m (51.9ms)[0m  COMMIT
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/devise-4.2.0/app/views/devise/mailer/confirmation_instructions.html.erb (27.0ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 565.9ms
+
+Sent mail to sssssasad@yopmail.com (3841.5ms)
+Date: Tue, 21 Nov 2017 13:14:29 +0530
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: sssssasad@yopmail.com
+Message-ID: <5a13d95d115c_38df3353c2c4249@lt-Satellite-M645.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome sssssasad@yopmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/auth_users/confirmation?confirmation_token=gXcXuBmRa6mUmWAKzjsg">Confirm my account</a></p>
+
+Completed 200 OK in 5430ms (Views: 2.3ms | ActiveRecord: 169.6ms)
+  [1m[35m (0.7ms)[0m  BEGIN
+WARNING: User#current is nil, are you including SentientController on your ApplicationController?
+WARNING: User#current is nil, are you including SentientController on your ApplicationController?
+  [1m[36mSQL (59.2ms)[0m  [1mINSERT INTO "sales_orders" ("customer_user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["customer_user_id", 2], ["created_at", "2017-11-21 07:57:17.657831"], ["updated_at", "2017-11-21 07:57:17.657831"]]
+  [1m[35m (7.9ms)[0m  COMMIT
+  [1m[36mSalesOrder Load (1.9ms)[0m  [1mSELECT "sales_orders".* FROM "sales_orders"[0m
+
+
+Started POST "/auth_users.json" for 127.0.0.1 at 2017-11-21 13:33:29 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Users::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"ss@yopmail.com", "first_name"=>"sda", "last_name"=>"asdas", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36mUser Exists (3.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'ss@yopmail.com' LIMIT 1[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "users" ("role", "email", "first_name", "last_name", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["role", "Sales"], ["email", "ss@yopmail.com"], ["first_name", "sda"], ["last_name", "asdas"], ["encrypted_password", "$2a$11$xTFpItftUcXowm5WJQNz9eJrYSJasOZ7CmVZ3DPbBxCTRbvsKJO/i"], ["created_at", "2017-11-21 08:03:30.846450"], ["updated_at", "2017-11-21 08:03:30.846450"], ["confirmation_token", "HT-i9HnPRcvFpVVFG7Lw"], ["confirmation_sent_at", "2017-11-21 08:03:30.847798"]]
+  [1m[36mMarketplace Load (1.5ms)[0m  [1mSELECT "marketplaces".* FROM "marketplaces"[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "accounts" ("user_id", "title", "marketplace_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["user_id", 13], ["title", "Etsy"], ["marketplace_id", 1], ["created_at", "2017-11-21 08:03:30.936603"], ["updated_at", "2017-11-21 08:03:30.936603"]]
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "accounts" ("user_id", "title", "marketplace_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 13], ["title", "Amazon"], ["marketplace_id", 2], ["created_at", "2017-11-21 08:03:30.944317"], ["updated_at", "2017-11-21 08:03:30.944317"]]
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "accounts" ("user_id", "title", "marketplace_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["user_id", 13], ["title", "eBay"], ["marketplace_id", 3], ["created_at", "2017-11-21 08:03:30.949187"], ["updated_at", "2017-11-21 08:03:30.949187"]]
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "accounts" ("user_id", "title", "marketplace_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 13], ["title", "Shopify"], ["marketplace_id", 4], ["created_at", "2017-11-21 08:03:30.953925"], ["updated_at", "2017-11-21 08:03:30.953925"]]
+WARNING: User#current is nil, are you including SentientController on your ApplicationController?
+WARNING: User#current is nil, are you including SentientController on your ApplicationController?
+  [1m[35mSQL (22.6ms)[0m  INSERT INTO "acc_accounts" ("acc_code", "name", "acc_type", "description", "sales_user_id", "default_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["acc_code", "1001"], ["name", "Receivables"], ["acc_type", "Profit/Loss"], ["description", "Amount received through Invoices"], ["sales_user_id", 13], ["default_type", "CreateInvoice"], ["created_at", "2017-11-21 08:03:31.001334"], ["updated_at", "2017-11-21 08:03:31.001334"]]
+WARNING: User#current is nil, are you including SentientController on your ApplicationController?
+WARNING: User#current is nil, are you including SentientController on your ApplicationController?
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "acc_accounts" ("acc_code", "name", "acc_type", "description", "sales_user_id", "default_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["acc_code", "1002"], ["name", "Payables"], ["acc_type", "Profit/Loss"], ["description", "Amount Payed to customers like Cheque and Returns"], ["sales_user_id", 13], ["default_type", "CreateReturnWizard"], ["created_at", "2017-11-21 08:03:31.032773"], ["updated_at", "2017-11-21 08:03:31.032773"]]
+  [1m[35m (23.3ms)[0m  COMMIT
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/devise-4.2.0/app/views/devise/mailer/confirmation_instructions.html.erb (6.2ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 425.5ms
+
+Sent mail to ss@yopmail.com (2981.8ms)
+Date: Tue, 21 Nov 2017 13:33:31 +0530
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: ss@yopmail.com
+Message-ID: <5a13ddd384201_413b2ee24cc6679c@lt-Satellite-M645.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome ss@yopmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/auth_users/confirmation?confirmation_token=HT-i9HnPRcvFpVVFG7Lw">Confirm my account</a></p>
+
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  UPDATE "users" SET "confirmed_at" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["confirmed_at", "2017-11-21 08:03:34.514433"], ["updated_at", "2017-11-21 08:03:34.517897"], ["id", 13]]
+  [1m[36m (12.4ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 4296ms (Views: 2.2ms | ActiveRecord: 98.6ms)
+
+
+Started POST "/auth_users.json" for 127.0.0.1 at 2017-11-21 13:33:57 +0530
+Processing by Users::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"sdds@yopmail.com", "first_name"=>"sda", "last_name"=>"asdas", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.9ms)[0m  BEGIN
+  [1m[36mUser Exists (1.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'sdds@yopmail.com' LIMIT 1[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "users" ("role", "email", "first_name", "last_name", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["role", "Sales"], ["email", "sdds@yopmail.com"], ["first_name", "sda"], ["last_name", "asdas"], ["encrypted_password", "$2a$11$9M/Gz1akb4vSufUeWAakeurKS/910Hji6efxI/nCjOC3IgpbMwhK."], ["created_at", "2017-11-21 08:03:58.405824"], ["updated_at", "2017-11-21 08:03:58.405824"], ["confirmation_token", "BihVWwsGXVADCvgy7EsW"], ["confirmation_sent_at", "2017-11-21 08:03:58.406659"]]
+  [1m[36mMarketplace Load (1.5ms)[0m  [1mSELECT "marketplaces".* FROM "marketplaces"[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "accounts" ("user_id", "title", "marketplace_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["user_id", 14], ["title", "Etsy"], ["marketplace_id", 1], ["created_at", "2017-11-21 08:03:58.488094"], ["updated_at", "2017-11-21 08:03:58.488094"]]
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "accounts" ("user_id", "title", "marketplace_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 14], ["title", "Amazon"], ["marketplace_id", 2], ["created_at", "2017-11-21 08:03:58.494321"], ["updated_at", "2017-11-21 08:03:58.494321"]]
+  [1m[35mSQL (52.8ms)[0m  INSERT INTO "accounts" ("user_id", "title", "marketplace_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["user_id", 14], ["title", "eBay"], ["marketplace_id", 3], ["created_at", "2017-11-21 08:03:58.499466"], ["updated_at", "2017-11-21 08:03:58.499466"]]
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "accounts" ("user_id", "title", "marketplace_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 14], ["title", "Shopify"], ["marketplace_id", 4], ["created_at", "2017-11-21 08:03:58.559256"], ["updated_at", "2017-11-21 08:03:58.559256"]]
+WARNING: User#current is nil, are you including SentientController on your ApplicationController?
+WARNING: User#current is nil, are you including SentientController on your ApplicationController?
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "acc_accounts" ("acc_code", "name", "acc_type", "description", "sales_user_id", "default_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["acc_code", "1001"], ["name", "Receivables"], ["acc_type", "Profit/Loss"], ["description", "Amount received through Invoices"], ["sales_user_id", 14], ["default_type", "CreateInvoice"], ["created_at", "2017-11-21 08:03:58.606287"], ["updated_at", "2017-11-21 08:03:58.606287"]]
+WARNING: User#current is nil, are you including SentientController on your ApplicationController?
+WARNING: User#current is nil, are you including SentientController on your ApplicationController?
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "acc_accounts" ("acc_code", "name", "acc_type", "description", "sales_user_id", "default_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["acc_code", "1002"], ["name", "Payables"], ["acc_type", "Profit/Loss"], ["description", "Amount Payed to customers like Cheque and Returns"], ["sales_user_id", 14], ["default_type", "CreateReturnWizard"], ["created_at", "2017-11-21 08:03:58.616532"], ["updated_at", "2017-11-21 08:03:58.616532"]]
+  [1m[35m (16.9ms)[0m  COMMIT
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/devise-4.2.0/app/views/devise/mailer/confirmation_instructions.html.erb (1.1ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 40.5ms
+
+Sent mail to sdds@yopmail.com (2908.4ms)
+Date: Tue, 21 Nov 2017 13:33:58 +0530
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: sdds@yopmail.com
+Message-ID: <5a13ddeeb038f_413b2ee24cc66836@lt-Satellite-M645.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome sdds@yopmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/auth_users/confirmation?confirmation_token=BihVWwsGXVADCvgy7EsW">Confirm my account</a></p>
+
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  UPDATE "users" SET "confirmed_at" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["confirmed_at", "2017-11-21 08:04:01.628554"], ["updated_at", "2017-11-21 08:04:01.631635"], ["id", 14]]
+  [1m[36m (56.3ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 3709ms (Views: 2.2ms | ActiveRecord: 162.7ms)
+
+
+Started POST "/sales_orders/search_sales_orders" for 127.0.0.1 at 2017-11-21 13:57:46 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SalesOrdersController#search_sales_orders as */*
+  Parameters: {"user_id"=>"1", "search_sales_orders"=>{"id"=>"1"}}
+  [1m[35mUser Load (2.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSalesOrder Load (1.8ms)[0m  [1mSELECT "sales_orders".* FROM "sales_orders" WHERE "sales_orders"."id" = $1[0m  [["id", 1]]
+Completed 200 OK in 263ms (Views: 3.3ms | ActiveRecord: 27.0ms)
+
+
+Started POST "/sales_orders/search_sales_orders" for 127.0.0.1 at 2017-11-21 13:58:14 +0530
+Processing by SalesOrdersController#search_sales_orders as */*
+  Parameters: {"user_id"=>"1", "search_sales_orders"=>{"id"=>"1", "contact_user_id"=>"2"}}
+  [1m[35mUser Load (1.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSalesOrder Load (1.4ms)[0m  [1mSELECT "sales_orders".* FROM "sales_orders" WHERE "sales_orders"."id" = $1[0m  [["id", 1]]
+  [1m[35mSalesOrder Load (1.2ms)[0m  SELECT "sales_orders".* FROM "sales_orders" WHERE "sales_orders"."contact_user_id" = $1  [["contact_user_id", 2]]
+Completed 200 OK in 26ms (Views: 6.1ms | ActiveRecord: 4.4ms)
