@@ -16,11 +16,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
     p 111111111111111111111111111
     p 'user.errors'
     p user.errors
+      p 'user.confirm'
+      p user.confirm
+      render :json=> {:status => true,:message => "User created!", :user => user }, :status=>200
     if user.save
       p 22222222222222222222222222222222222222
       'p user'
       p user
-      render :json=> {:status => true,:message => "User created!", :user => user }, :status=>200
       return
     else
       p 33333333333333333333333333
