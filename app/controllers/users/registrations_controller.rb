@@ -13,23 +13,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     user = User.new(user_params)
-    p 111111111111111111111111111
-    p 'user.errors'
-    p user.errors
-      p 'user.confirm'
-      p user.confirm
+    user.errors
+    if user.confirm
       render :json=> {:status => true,:message => "User created!", :user => user }, :status=>200
-    if user.save
-      p 22222222222222222222222222222222222222
-      'p user'
-      p user
       return
     else
-      p 33333333333333333333333333
       warden.custom_failure!
       render :json=> user.errors, :status=>422
-      p 'user.errors'
-      p user.errors
     end
   end
 
