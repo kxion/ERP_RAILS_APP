@@ -12,10 +12,15 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   def create
-    begin
-      super
-    rescue Exception => e
-      puts e
+    user = User.new(user_params)
+    if user.save
+      'p user'
+      p user
+      render :json=> {:status => true,:message => "User created!", :user => user }, :status=>200
+      return
+    else
+      warden.custom_failure!
+      render :json=> user.errors, :status=>422
     end
   end
 
@@ -48,7 +53,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
     params[:user][:role] = 'Sales'
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:role, :first_name,:last_name])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:role, :first_name,:last_name,:password, :password_confirmation])
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:role, :email, :first_name, :last_name, :password, :password_confirmation)
   end
 
   # If you have extra params to permit, append them to the sanitizer.
