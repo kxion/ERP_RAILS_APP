@@ -48,7 +48,7 @@ Rails.application.configure do
   #   :password             => "Dev12345678",
   #   :authentication       => "plain",
   # }
- config.action_mailer.smtp_settings = {
+  config.action_mailer.smtp_settings = {
     :address              => "smtp.gmail.com",
     :port                 => 587,
     :user_name            => "noreplyclarabyte@gmail.com",
