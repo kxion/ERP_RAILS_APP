@@ -43,6 +43,8 @@ Rails.application.routes.draw do
         get 'refresh'
         post 'get_sales_orders'
         post 'search_sales_orders'
+        post 'view_sales_orders'
+        post 'edit_sales_orders'
       end
     end
     resources :sales_order_invoices do

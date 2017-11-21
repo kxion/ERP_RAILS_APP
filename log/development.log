@@ -16182,3 +16182,32 @@ Processing by SalesOrdersController#search_sales_orders as */*
   [1m[36mSalesOrder Load (1.4ms)[0m  [1mSELECT "sales_orders".* FROM "sales_orders" WHERE "sales_orders"."id" = $1[0m  [["id", 1]]
   [1m[35mSalesOrder Load (1.2ms)[0m  SELECT "sales_orders".* FROM "sales_orders" WHERE "sales_orders"."contact_user_id" = $1  [["contact_user_id", 2]]
 Completed 200 OK in 26ms (Views: 6.1ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/sales_orders/search_sales_orders" for 127.0.0.1 at 2017-11-21 15:33:17 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SalesOrdersController#search_sales_orders as */*
+  Parameters: {"user_id"=>"1", "search_sales_orders"=>{"id"=>"1"}}
+  [1m[35mUser Load (1.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSalesOrder Load (2.0ms)[0m  [1mSELECT "sales_orders".* FROM "sales_orders" WHERE "sales_orders"."id" = $1[0m  [["id", 1]]
+Completed 200 OK in 316ms (Views: 3.3ms | ActiveRecord: 27.6ms)
+
+
+Started POST "/sales_orders/view_sales_orders" for 127.0.0.1 at 2017-11-21 15:38:48 +0530
+Processing by SalesOrdersController#view_sales_orders as */*
+  Parameters: {"user_id"=>"1", "sales_order_id"=>"1"}
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSalesOrder Load (1.1ms)[0m  [1mSELECT  "sales_orders".* FROM "sales_orders" WHERE "sales_orders"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 132ms (Views: 2.6ms | ActiveRecord: 17.7ms)
+
+
+Started POST "/sales_orders/edit_sales_orders" for 127.0.0.1 at 2017-11-21 15:45:48 +0530
+Processing by SalesOrdersController#edit_sales_orders as */*
+  Parameters: {"user_id"=>"1", "sales_order_id"=>"1", "sales_order"=>{"uid"=>"2323"}}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSalesOrder Load (1.5ms)[0m  [1mSELECT  "sales_orders".* FROM "sales_orders" WHERE "sales_orders"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.7ms)[0m  BEGIN
+WARNING: User#current is nil, are you including SentientController on your ApplicationController?
+  [1m[36mSQL (13.4ms)[0m  [1mUPDATE "sales_orders" SET "uid" = $1, "updated_at" = $2 WHERE "sales_orders"."id" = $3[0m  [["uid", "2323"], ["updated_at", "2017-11-21 10:15:49.394403"], ["id", 1]]
+  [1m[35m (76.6ms)[0m  COMMIT
+Completed 200 OK in 242ms (Views: 0.8ms | ActiveRecord: 107.4ms)

@@ -98,6 +98,35 @@ class SalesOrdersController < ApplicationController
       end
     end
 
+    def view_sales_orders
+      if params[:user_id].present?
+        @user = User.find_by(id: params[:user_id])
+        @sales_order = SalesOrder.find(params[:sales_order_id])
+        if @sales_order.present?
+          render :json=> {:status => true,:message => "Sales Order list!", :sales_order => @sales_order}, :status=>200
+        else
+          render :json=> {:status => true,:message => "No data!"}, :status=>200
+        end
+      else
+        render :json=> {:status => true,:message => "Something Went Wrong!"}, :status=>201
+      end
+    end
+
+    def edit_sales_orders
+      if params[:user_id].present?
+        @user = User.find_by(id: params[:user_id])
+        @sales_order = SalesOrder.find_by(id: params[:sales_order_id])
+        if @sales_order.present?
+          @sales_order.update_attributes(sales_order_params)
+          render :json=> {:status => true,:message => "Sales Order updated!" }, :status=>200
+        else
+          render :json=> {:status => false,:message => "No data!"}, :status=>201
+        end
+      else
+        render :json=> {:status => false,:message => "Something Went Wrong!"}, :status=>201
+      end
+    end
+
     def refresh
       current_user.refresh_orders
       render json: {status: :ok}
