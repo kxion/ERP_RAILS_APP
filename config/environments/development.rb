@@ -41,11 +41,18 @@ Rails.application.configure do
   Rails.application.routes.default_url_options = { host: 'http://localhost:3000' }
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-  config.action_mailer.smtp_settings = {
+  # config.action_mailer.smtp_settings = {
+  #   :address              => "smtp.gmail.com",
+  #   :port                 => 587,
+  #   :user_name            => "wherever2016rails@gmail.com",
+  #   :password             => "Dev12345678",
+  #   :authentication       => "plain",
+  # }
+ config.action_mailer.smtp_settings = {
     :address              => "smtp.gmail.com",
     :port                 => 587,
-    :user_name            => "wherever2016rails@gmail.com",
-    :password             => "Dev12345678",
+    :user_name            => "noreplyclarabyte@gmail.com",
+    :password             => "Password@123!",
     :authentication       => "plain",
   }
 end

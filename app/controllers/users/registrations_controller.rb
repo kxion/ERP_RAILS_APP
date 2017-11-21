@@ -11,7 +11,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   def create
-    super
+    begin
+      super
+    rescue Exception => e
+      puts e
+    end
   end
 
   # GET /resource/edit

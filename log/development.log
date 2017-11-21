@@ -15447,3 +15447,144 @@ ActionController::RoutingError (No route matches [GET] "/sadfasd"):
   Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.6ms)
   Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.0ms)
   Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (161.8ms)
+  [1m[36mUser Load (92.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 08:33:49 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (27.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (3.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (147.0ms)
+Completed 200 OK in 800ms (Views: 681.1ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/assets/application-7377024958ba493eaaac8c984a5eadbb.css?body=1" for 127.0.0.1 at 2017-11-21 08:33:51 +0530
+
+
+Started GET "/assets/jquery_ujs-b58be681f2702254e79c46cdcbbc9616.js?body=1" for 127.0.0.1 at 2017-11-21 08:33:51 +0530
+
+
+Started GET "/assets/jquery-06e29fe56831942b4f21ce49e45e1429.js?body=1" for 127.0.0.1 at 2017-11-21 08:33:51 +0530
+
+
+Started GET "/assets/application-47f576ff989e996390ab5dd2b5544dc9.js?body=1" for 127.0.0.1 at 2017-11-21 08:33:51 +0530
+
+
+Started GET "/assets/turbolinks-ec43e9d221200f76649ada6a93a32e1b.js?body=1" for 127.0.0.1 at 2017-11-21 08:33:51 +0530
+
+
+Started GET "/auth_users/sign_up" for 127.0.0.1 at 2017-11-21 08:33:54 +0530
+Processing by Users::RegistrationsController#new as HTML
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (1.3ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/devise-4.2.0/app/views/devise/registrations/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 81ms (Views: 77.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/auth_users" for 127.0.0.1 at 2017-11-21 08:34:12 +0530
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iUfyPb0M0fwaaHZjVjcjcZ6/SPGCMAKsje+q7XYhUrpIDs2a3dS8x1GNj19l2zSnzaZxPeVHGUPacavE3Cw5aA==", "user"=>{"email"=>"mani@yopmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36mUser Exists (3.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'mani@yopmail.com' LIMIT 1[0m
+  [1m[35mSQL (76.0ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "role", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["email", "mani@yopmail.com"], ["encrypted_password", "$2a$11$8MvbLCZNSvRGFqzejrg59.mzaIJbcCCv78bHiMJ0.rUgyDuPCTf7i"], ["role", "Sales"], ["created_at", "2017-11-21 03:04:13.656147"], ["updated_at", "2017-11-21 03:04:13.656147"], ["confirmation_token", "qwUKusKRczy7-akFZ5Eg"], ["confirmation_sent_at", "2017-11-21 03:04:13.657177"]]
+  [1m[36mMarketplace Load (96.4ms)[0m  [1mSELECT "marketplaces".* FROM "marketplaces"[0m
+  [1m[35mSQL (34.9ms)[0m  INSERT INTO "accounts" ("user_id", "title", "marketplace_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["user_id", 3], ["title", "Etsy"], ["marketplace_id", 1], ["created_at", "2017-11-21 03:04:13.948363"], ["updated_at", "2017-11-21 03:04:13.948363"]]
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "accounts" ("user_id", "title", "marketplace_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 3], ["title", "Amazon"], ["marketplace_id", 2], ["created_at", "2017-11-21 03:04:13.990913"], ["updated_at", "2017-11-21 03:04:13.990913"]]
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "accounts" ("user_id", "title", "marketplace_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["user_id", 3], ["title", "eBay"], ["marketplace_id", 3], ["created_at", "2017-11-21 03:04:13.997625"], ["updated_at", "2017-11-21 03:04:13.997625"]]
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "accounts" ("user_id", "title", "marketplace_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 3], ["title", "Shopify"], ["marketplace_id", 4], ["created_at", "2017-11-21 03:04:14.004208"], ["updated_at", "2017-11-21 03:04:14.004208"]]
+WARNING: User#current is nil, are you including SentientController on your ApplicationController?
+WARNING: User#current is nil, are you including SentientController on your ApplicationController?
+  [1m[35mSQL (9.2ms)[0m  INSERT INTO "acc_accounts" ("acc_code", "name", "acc_type", "description", "sales_user_id", "default_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["acc_code", "1001"], ["name", "Receivables"], ["acc_type", "Profit/Loss"], ["description", "Amount received through Invoices"], ["sales_user_id", 3], ["default_type", "CreateInvoice"], ["created_at", "2017-11-21 03:04:14.066015"], ["updated_at", "2017-11-21 03:04:14.066015"]]
+WARNING: User#current is nil, are you including SentientController on your ApplicationController?
+WARNING: User#current is nil, are you including SentientController on your ApplicationController?
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "acc_accounts" ("acc_code", "name", "acc_type", "description", "sales_user_id", "default_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["acc_code", "1002"], ["name", "Payables"], ["acc_type", "Profit/Loss"], ["description", "Amount Payed to customers like Cheque and Returns"], ["sales_user_id", 3], ["default_type", "CreateReturnWizard"], ["created_at", "2017-11-21 03:04:14.083342"], ["updated_at", "2017-11-21 03:04:14.083342"]]
+  [1m[35m (132.8ms)[0m  COMMIT
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/devise-4.2.0/app/views/devise/mailer/confirmation_instructions.html.erb (2.8ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 543.6ms
+
+Sent mail to mani@yopmail.com (2398.1ms)
+Date: Tue, 21 Nov 2017 08:34:14 +0530
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: mani@yopmail.com
+Message-ID: <5a1397aed2fa5_fe13fd7b89d82b084ce@lt-Satellite-M645.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome mani@yopmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/auth_users/confirmation?confirmation_token=qwUKusKRczy7-akFZ5Eg">Confirm my account</a></p>
+
+Redirected to http://localhost:4000/
+Completed 302 Found in 4388ms (ActiveRecord: 385.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 08:34:17 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 72ms (Views: 67.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth_users/sign_up" for 127.0.0.1 at 2017-11-21 08:41:05 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Users::RegistrationsController#new as HTML
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (5.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/devise-4.2.0/app/views/devise/registrations/new.html.erb within layouts/application (149.7ms)
+Completed 200 OK in 576ms (Views: 457.1ms | ActiveRecord: 13.2ms)
+
+
+Started POST "/auth_users" for 127.0.0.1 at 2017-11-21 08:41:19 +0530
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A6WPW9cM///QJXExiqQA1VJSizPzW0IpyDNTh4WZD87C7LD8t9SSxJvAiA25SBcDAUuy/5QsWcafrVKuL5RkHA==", "user"=>{"email"=>"test1@yopmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36mUser Exists (3.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'test1@yopmail.com' LIMIT 1[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "role", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["email", "test1@yopmail.com"], ["encrypted_password", "$2a$11$VlscXEMkzZKUrzkPK6VZHOhzyeJ8IpoevEeYz4S0rP3Rl63dBP7e6"], ["role", "Sales"], ["created_at", "2017-11-21 03:11:20.385426"], ["updated_at", "2017-11-21 03:11:20.385426"], ["confirmation_token", "t17ywyZT1xGu3vEZtFwa"], ["confirmation_sent_at", "2017-11-21 03:11:20.386396"]]
+  [1m[36mMarketplace Load (2.2ms)[0m  [1mSELECT "marketplaces".* FROM "marketplaces"[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "accounts" ("user_id", "title", "marketplace_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["user_id", 4], ["title", "Etsy"], ["marketplace_id", 1], ["created_at", "2017-11-21 03:11:20.512126"], ["updated_at", "2017-11-21 03:11:20.512126"]]
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "accounts" ("user_id", "title", "marketplace_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 4], ["title", "Amazon"], ["marketplace_id", 2], ["created_at", "2017-11-21 03:11:20.519616"], ["updated_at", "2017-11-21 03:11:20.519616"]]
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "accounts" ("user_id", "title", "marketplace_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["user_id", 4], ["title", "eBay"], ["marketplace_id", 3], ["created_at", "2017-11-21 03:11:20.525601"], ["updated_at", "2017-11-21 03:11:20.525601"]]
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "accounts" ("user_id", "title", "marketplace_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 4], ["title", "Shopify"], ["marketplace_id", 4], ["created_at", "2017-11-21 03:11:20.532463"], ["updated_at", "2017-11-21 03:11:20.532463"]]
+WARNING: User#current is nil, are you including SentientController on your ApplicationController?
+WARNING: User#current is nil, are you including SentientController on your ApplicationController?
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "acc_accounts" ("acc_code", "name", "acc_type", "description", "sales_user_id", "default_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["acc_code", "1001"], ["name", "Receivables"], ["acc_type", "Profit/Loss"], ["description", "Amount received through Invoices"], ["sales_user_id", 4], ["default_type", "CreateInvoice"], ["created_at", "2017-11-21 03:11:20.585199"], ["updated_at", "2017-11-21 03:11:20.585199"]]
+WARNING: User#current is nil, are you including SentientController on your ApplicationController?
+WARNING: User#current is nil, are you including SentientController on your ApplicationController?
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "acc_accounts" ("acc_code", "name", "acc_type", "description", "sales_user_id", "default_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["acc_code", "1002"], ["name", "Payables"], ["acc_type", "Profit/Loss"], ["description", "Amount Payed to customers like Cheque and Returns"], ["sales_user_id", 4], ["default_type", "CreateReturnWizard"], ["created_at", "2017-11-21 03:11:20.595041"], ["updated_at", "2017-11-21 03:11:20.595041"]]
+  [1m[35m (22.3ms)[0m  COMMIT
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/devise-4.2.0/app/views/devise/mailer/confirmation_instructions.html.erb (2.6ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 489.3ms
+
+Sent mail to test1@yopmail.com (3176.6ms)
+Date: Tue, 21 Nov 2017 08:41:21 +0530
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: test1@yopmail.com
+Message-ID: <5a139959302ab_16293175680153ac@lt-Satellite-M645.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome test1@yopmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/auth_users/confirmation?confirmation_token=t17ywyZT1xGu3vEZtFwa">Confirm my account</a></p>
+
+Redirected to http://localhost:4000/
+Completed 302 Found in 4624ms (ActiveRecord: 55.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 08:41:24 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (3.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 106ms (Views: 101.1ms | ActiveRecord: 0.0ms)
