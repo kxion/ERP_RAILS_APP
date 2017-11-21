@@ -14,6 +14,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def create
     user = User.new(user_params)
     p 111111111111111111111111111
+    p 'user.errors'
+    p user.errors
     if user.save
       p 22222222222222222222222222222222222222
       'p user'
@@ -24,6 +26,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
       p 33333333333333333333333333
       warden.custom_failure!
       render :json=> user.errors, :status=>422
+      p 'user.errors'
+      p user.errors
     end
   end
 
