@@ -3,7 +3,8 @@ class ApplicationController < ActionController::Base
   skip_before_filter :verify_authenticity_token
   
   before_filter :set_headers
-
+  p 'test'
+  p Temporary
   include SentientController
 
   def set_headers
