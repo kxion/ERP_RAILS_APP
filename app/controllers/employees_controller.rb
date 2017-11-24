@@ -39,6 +39,9 @@ class EmployeesController < ApplicationController
   def update
     user = User.find(params[:id])
     if user.update_attributes(update_employee_params)
+      p user.password = params[:password]
+      p user.password_confirmation = params[:password_confirmation]
+      user.save
       render status: 200, json: { employee_id: user.employee.id}
     else
       render status: 200, json: { message: user.errors.full_messages.first }
