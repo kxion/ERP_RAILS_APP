@@ -16,11 +16,15 @@ class EmployeesController < ApplicationController
   end
 
   def create
-    user = User.new(employee_params)
-    user.employee.sales_user_id = current_user.id
+    p 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+    p user = User.new(employee_params)
+    p 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'
+    p user.employee.sales_user_id = current_user.id
     if user.save
+      p 111111111111111111
       render status: 200, json: { employee_id: user.employee.id}
     else
+      p 2222222222222222222
       render status: 200, json: { message: user.errors.full_messages.first }
     end
   end 
