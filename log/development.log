@@ -16300,3 +16300,38 @@ ActionController::RoutingError (uninitialized constant ApplicationController::Te
   Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
   Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.3ms)
   Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (84.7ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-24 09:52:46 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (49.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"2", "search_inventory_item"=>{"make"=>"test_make"}}
+  [1m[35mUser Load (40.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 500 Internal Server Error in 498ms (ActiveRecord: 304.8ms)
+
+NoMethodError (undefined method `match' for nil:NilClass
+Did you mean?  catch):
+  app/controllers/inventory_management_controller.rb:95:in `search_inventory_item'
+
+
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (17.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.6ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.7ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (90.1ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (2.4ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.6ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.4ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (154.3ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (250.3ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-24 09:55:04 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"2", "search_inventory_item"=>{"make"=>"test_make"}}
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mInventoryItem Load (114.8ms)[0m  SELECT "inventory_items".* FROM "inventory_items" WHERE (icc LIKE NULL OR serial LIKE NULL OR make LIKE NULL OR model LIKE NULL OR location LIKE NULL)
+  [1m[36mInventoryItem Load (18.1ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items" WHERE (make = 'test_make')[0m
+Completed 200 OK in 294ms (Views: 1.3ms | ActiveRecord: 163.8ms)

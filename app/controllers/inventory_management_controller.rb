@@ -92,7 +92,8 @@ class InventoryManagementController < ApplicationController
 			array_search = []
 			if params[:search_inventory_item].present?
 				search_text = params[:search_inventory_item][:search_box]
-	      if (search_text).match(/^(\d)+$/).present?
+	      if search_text.present?
+	      	(search_text).match(/^(\d)+$/)
 	        search_id = InventoryItem.where(id: search_text.to_i)
 			    array_search << search_id
 			    search_icc = InventoryItem.where('icc = ?',params[:search_inventory_item][:icc]) if params[:search_inventory_item][:icc].present?
@@ -214,7 +215,8 @@ class InventoryManagementController < ApplicationController
 			array_search = []
 			if params[:search_listing].present?
 				search_text = params[:search_listing][:search_box]
-	      if (search_text).match(/^(\d)+$/).present?
+	      if search_text.present?
+	      	(search_text).match(/^(\d)+$/)
 	        search_id = Listing.where(id: search_text.to_i)
 			    array_search << search_id
 	        search_title = Listing.where('title = ?',params[:search_listing][:title]) if params[:search_listing][:title].present?
@@ -339,7 +341,8 @@ class InventoryManagementController < ApplicationController
 			array_search = []
 			if params[:search_item_source].present?
 				search_text = params[:search_item_source][:search_box]
-	      if (search_text).match(/^(\d)+$/).present?
+	      if search_text.present?
+	      	(search_text).match(/^(\d)+$/)
 	        search_id = ItemSource.where(id: search_text.to_i)
 			    array_search << search_id
 	        search_name = ItemSource.where('name = ?',params[:search_item_source][:name]) if params[:search_item_source][:name].present?
