@@ -16335,3 +16335,516 @@ Processing by InventoryManagementController#search_inventory_item as */*
   [1m[35mInventoryItem Load (114.8ms)[0m  SELECT "inventory_items".* FROM "inventory_items" WHERE (icc LIKE NULL OR serial LIKE NULL OR make LIKE NULL OR model LIKE NULL OR location LIKE NULL)
   [1m[36mInventoryItem Load (18.1ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items" WHERE (make = 'test_make')[0m
 Completed 200 OK in 294ms (Views: 1.3ms | ActiveRecord: 163.8ms)
+  [1m[36mUser Load (20.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (3.0ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mEmployee Load (30.8ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+
+
+Started GET "/kkk" for 127.0.0.1 at 2017-11-24 10:05:43 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/kkk"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /home/lt/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/lt/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/lt/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (51.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (43.3ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (25.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (327.4ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.2ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (63.5ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (110.6ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-24 13:23:31 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"2", "search_inventory_item"=>{"search_box"=>"test_make"}}
+  [1m[35mUser Load (2.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mInventoryItem Load (56.7ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items" WHERE "inventory_items"."id" = $1[0m  [["id", 0]]
+Completed 200 OK in 273ms (Views: 1.5ms | ActiveRecord: 105.8ms)
+  [1m[35mInventoryItem Load (21.1ms)[0m  SELECT "inventory_items".* FROM "inventory_items"
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-24 13:24:05 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"2", "search_inventory_item"=>{"search_box"=>"text_serial_30"}}
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mInventoryItem Load (1.3ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items" WHERE "inventory_items"."id" = $1[0m  [["id", 0]]
+Completed 200 OK in 10ms (Views: 0.9ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-24 13:24:26 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"2", "search_inventory_item"=>{"search_box"=>"7"}}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mInventoryItem Load (1.4ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items" WHERE "inventory_items"."id" = $1[0m  [["id", 7]]
+Completed 200 OK in 58ms (Views: 8.7ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-24 13:24:45 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"2", "search_inventory_item"=>{"search_box"=>"text_icc_30"}}
+  [1m[35mUser Load (1.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mInventoryItem Load (1.2ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items" WHERE "inventory_items"."id" = $1[0m  [["id", 0]]
+Completed 200 OK in 11ms (Views: 0.6ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-24 13:30:28 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"2", "search_inventory_item"=>{"search_box"=>"text_icc_30"}}
+  [1m[35mUser Load (1.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 500 Internal Server Error in 164ms (ActiveRecord: 11.0ms)
+
+NameError (undefined local variable or method `search_description' for #<InventoryManagementController:0x007f2c892117d8>
+Did you mean?  search_description):
+  app/controllers/inventory_management_controller.rb:104:in `search_inventory_item'
+
+
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.4ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.2ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (80.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (117.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (184.0ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-24 13:33:27 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"2", "search_inventory_item"=>{"search_box"=>"text_icc_30"}}
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mInventoryItem Load (2.2ms)[0m  SELECT "inventory_items".* FROM "inventory_items" WHERE (icc LIKE NULL OR serial LIKE NULL OR make LIKE NULL OR model LIKE NULL OR location LIKE NULL)
+Completed 200 OK in 77ms (Views: 0.7ms | ActiveRecord: 14.9ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-24 13:34:14 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"2", "search_inventory_item"=>{"search_box"=>"text_icc_30"}}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mInventoryItem Load (1.7ms)[0m  SELECT "inventory_items".* FROM "inventory_items" WHERE (icc LIKE NULL OR serial LIKE NULL OR make LIKE NULL OR model LIKE NULL OR location LIKE NULL)
+Completed 200 OK in 75ms (Views: 0.7ms | ActiveRecord: 13.6ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-24 13:34:51 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"2", "search_inventory_item"=>{"search_box"=>"text_icc_30"}}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mInventoryItem Load (2.2ms)[0m  SELECT "inventory_items".* FROM "inventory_items" WHERE (icc LIKE NULL OR serial LIKE NULL OR make LIKE NULL OR model LIKE NULL OR location LIKE NULL)
+Completed 200 OK in 78ms (Views: 0.8ms | ActiveRecord: 14.6ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-24 13:35:27 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"2", "search_inventory_item"=>{"search_box"=>"text_icc_30"}}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mInventoryItem Load (1.8ms)[0m  SELECT "inventory_items".* FROM "inventory_items" WHERE (icc LIKE NULL OR serial LIKE NULL OR make LIKE NULL OR model LIKE NULL OR location LIKE NULL)
+Completed 200 OK in 78ms (Views: 0.7ms | ActiveRecord: 13.0ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-24 13:35:54 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"2", "search_inventory_item"=>{"search_box"=>"text_icc_30"}}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mInventoryItem Load (2.2ms)[0m  SELECT "inventory_items".* FROM "inventory_items" WHERE (icc LIKE NULL OR serial LIKE NULL OR make LIKE NULL OR model LIKE NULL OR location LIKE NULL)
+Completed 200 OK in 77ms (Views: 0.9ms | ActiveRecord: 13.7ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-24 13:37:26 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"2", "search_inventory_item"=>{"search_box"=>"text_icc_30"}}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mInventoryItem Load (18.7ms)[0m  SELECT "inventory_items".* FROM "inventory_items" WHERE (icc LIKE 'text_icc_30' OR serial LIKE 'text_icc_30' OR make LIKE 'text_icc_30' OR model LIKE 'text_icc_30' OR location LIKE 'text_icc_30')
+Completed 200 OK in 131ms (Views: 2.3ms | ActiveRecord: 32.3ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-24 13:38:17 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"2", "search_inventory_item"=>{"search_box"=>"7"}}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 9.5ms)
+
+NoMethodError (undefined method `to_i' for #<MatchData "7" 1:"7">
+Did you mean?  to_s
+               to_a):
+  app/controllers/inventory_management_controller.rb:98:in `search_inventory_item'
+
+
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.5ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.7ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.7ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.3ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (76.7ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-24 13:38:56 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"2", "search_inventory_item"=>{"search_box"=>"7"}}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mInventoryItem Load (1.0ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items" WHERE "inventory_items"."id" = $1[0m  [["id", nil]]
+Completed 200 OK in 80ms (Views: 0.7ms | ActiveRecord: 13.9ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-24 13:40:26 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"2", "search_inventory_item"=>{"search_box"=>"7"}}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mInventoryItem Load (1.3ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items" WHERE "inventory_items"."id" = $1[0m  [["id", 7]]
+Completed 200 OK in 112ms (Views: 2.2ms | ActiveRecord: 16.5ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-24 13:40:48 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"2", "search_inventory_item"=>{"search_box"=>"text_serial_34"}}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mInventoryItem Load (2.3ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items" WHERE (icc LIKE 'text_serial_34' OR serial LIKE 'text_serial_34' OR make LIKE 'text_serial_34' OR model LIKE 'text_serial_34' OR location LIKE 'text_serial_34')[0m
+Completed 200 OK in 18ms (Views: 3.2ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-24 13:41:15 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"2", "search_inventory_item"=>{"search_box"=>"text_serial_34", "icc"=>"text_icc_30"}}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mInventoryItem Load (1.7ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items" WHERE (icc LIKE 'text_serial_34' OR serial LIKE 'text_serial_34' OR make LIKE 'text_serial_34' OR model LIKE 'text_serial_34' OR location LIKE 'text_serial_34')[0m
+Completed 200 OK in 16ms (Views: 3.2ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-24 13:44:03 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"2", "search_inventory_item"=>{"search_box"=>"text_serial_34", "icc"=>"text_icc_30"}}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mInventoryItem Load (2.4ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items" WHERE (icc LIKE 'text_serial_34' OR serial LIKE 'text_serial_34' OR make LIKE 'text_serial_34' OR model LIKE 'text_serial_34' OR location LIKE 'text_serial_34')[0m
+Completed 200 OK in 113ms (Views: 2.5ms | ActiveRecord: 16.7ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-24 13:45:10 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"2", "search_inventory_item"=>{"search_box"=>"text_serial_34", "icc"=>"text_icc_30"}}
+  [1m[35mUser Load (2.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mInventoryItem Load (1.0ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items" WHERE "inventory_items"."id" = $1[0m  [["id", 0]]
+  [1m[35mInventoryItem Load (2.0ms)[0m  SELECT "inventory_items".* FROM "inventory_items" WHERE (icc = 'text_icc_30')
+Completed 200 OK in 142ms (Views: 2.4ms | ActiveRecord: 17.2ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-24 13:45:59 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"2", "search_inventory_item"=>{"search_box"=>"text_serial_34", "icc"=>"text_icc_30"}}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mInventoryItem Load (0.9ms)[0m  SELECT "inventory_items".* FROM "inventory_items" WHERE "inventory_items"."id" = $1  [["id", 0]]
+  [1m[36mInventoryItem Load (1.2ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items" WHERE (icc = 'text_icc_30')[0m
+Completed 200 OK in 126ms (Views: 2.2ms | ActiveRecord: 15.9ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-24 13:47:05 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"2", "search_inventory_item"=>{"search_box"=>"text_serial_34", "icc"=>"text_icc_30"}}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mInventoryItem Load (1.0ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items" WHERE "inventory_items"."id" = $1[0m  [["id", 0]]
+  [1m[35mInventoryItem Load (1.5ms)[0m  SELECT "inventory_items".* FROM "inventory_items" WHERE (icc = 'text_icc_30')
+Completed 200 OK in 121ms (Views: 2.3ms | ActiveRecord: 17.9ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-24 13:47:41 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"2", "search_inventory_item"=>{"search_box"=>"text_serial_34", "icc"=>"text_icc_30"}}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mInventoryItem Load (1.0ms)[0m  SELECT "inventory_items".* FROM "inventory_items" WHERE "inventory_items"."id" = $1  [["id", 0]]
+  [1m[36mInventoryItem Load (1.3ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items" WHERE (icc = 'text_icc_30')[0m
+Completed 200 OK in 177ms (Views: 3.2ms | ActiveRecord: 19.1ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-24 13:59:14 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"2", "search_inventory_item"=>{"search_box"=>"text_serial_34", "icc"=>"text_icc_30"}}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mInventoryItem Load (1.7ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items" WHERE (icc LIKE 'text_serial_34' OR serial LIKE 'text_serial_34' OR make LIKE 'text_serial_34' OR model LIKE 'text_serial_34' OR location LIKE 'text_serial_34')[0m
+  [1m[35mInventoryItem Load (1.7ms)[0m  SELECT "inventory_items".* FROM "inventory_items" WHERE (icc = 'text_icc_30')
+Completed 200 OK in 120ms (Views: 3.2ms | ActiveRecord: 17.9ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-24 13:59:46 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"2", "search_inventory_item"=>{"icc"=>"text_icc_30"}}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mInventoryItem Load (2.1ms)[0m  SELECT "inventory_items".* FROM "inventory_items" WHERE (icc = 'text_icc_30')
+Completed 200 OK in 16ms (Views: 2.9ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-24 14:00:01 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"2", "search_inventory_item"=>{"icc"=>"text_model_30"}}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mInventoryItem Load (1.2ms)[0m  SELECT "inventory_items".* FROM "inventory_items" WHERE (icc = 'text_model_30')
+Completed 200 OK in 9ms (Views: 0.8ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-24 14:00:08 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"2", "search_inventory_item"=>{"icc"=>"text_model_30"}}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mInventoryItem Load (1.3ms)[0m  SELECT "inventory_items".* FROM "inventory_items" WHERE (icc = 'text_model_30')
+Completed 200 OK in 10ms (Views: 0.6ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-24 14:00:14 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"2", "search_inventory_item"=>{"search_box"=>"text_model_30", "icc"=>"text_model_30"}}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mInventoryItem Load (1.7ms)[0m  SELECT "inventory_items".* FROM "inventory_items" WHERE (icc LIKE 'text_model_30' OR serial LIKE 'text_model_30' OR make LIKE 'text_model_30' OR model LIKE 'text_model_30' OR location LIKE 'text_model_30')
+  [1m[36mInventoryItem Load (1.4ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items" WHERE (icc = 'text_model_30')[0m
+Completed 200 OK in 21ms (Views: 3.0ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-24 14:03:27 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"2", "search_inventory_item"=>{"search_box"=>"text_model_30", "icc"=>"text_model_30"}}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 10.1ms)
+
+NoMethodError (undefined method `present' for "":String
+Did you mean?  present?
+               presence
+               presence_in
+               prepend):
+  app/controllers/inventory_management_controller.rb:97:in `search_inventory_item'
+
+
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.1ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.3ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.3ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (60.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.2ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (43.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.6ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (87.5ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-24 14:03:47 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"2", "search_inventory_item"=>{"search_box"=>"text_model_30", "icc"=>"text_model_30"}}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mInventoryItem Load (1.7ms)[0m  SELECT "inventory_items".* FROM "inventory_items" WHERE (icc LIKE 'text_model_30' OR serial LIKE 'text_model_30' OR make LIKE 'text_model_30' OR model LIKE 'text_model_30' OR location LIKE 'text_model_30')
+  [1m[36mInventoryItem Load (1.5ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items" WHERE (icc = 'text_model_30')[0m
+Completed 200 OK in 118ms (Views: 2.7ms | ActiveRecord: 17.0ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-24 14:03:57 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"2", "search_inventory_item"=>{"search_box"=>"2", "icc"=>"text_model_30"}}
+  [1m[35mUser Load (2.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mInventoryItem Load (1.0ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items" WHERE "inventory_items"."id" = $1[0m  [["id", 2]]
+  [1m[35mInventoryItem Load (1.5ms)[0m  SELECT "inventory_items".* FROM "inventory_items" WHERE (icc = 'text_model_30')
+Completed 200 OK in 18ms (Views: 1.0ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-24 14:04:10 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"2", "search_inventory_item"=>{"search_box"=>"7", "icc"=>"text_model_30"}}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mInventoryItem Load (1.5ms)[0m  SELECT "inventory_items".* FROM "inventory_items" WHERE "inventory_items"."id" = $1  [["id", 7]]
+  [1m[36mInventoryItem Load (1.5ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items" WHERE (icc = 'text_model_30')[0m
+Completed 200 OK in 17ms (Views: 2.2ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/search_inventory_item" for 127.0.0.1 at 2017-11-24 14:04:42 +0530
+Processing by InventoryManagementController#search_inventory_item as */*
+  Parameters: {"user_id"=>"2", "search_inventory_item"=>{"search_box"=>"text_model_31", "icc"=>"text_icc_30"}}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mInventoryItem Load (1.9ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items" WHERE (icc LIKE 'text_model_31' OR serial LIKE 'text_model_31' OR make LIKE 'text_model_31' OR model LIKE 'text_model_31' OR location LIKE 'text_model_31')[0m
+  [1m[35mInventoryItem Load (1.2ms)[0m  SELECT "inventory_items".* FROM "inventory_items" WHERE (icc = 'text_icc_30')
+Completed 200 OK in 18ms (Views: 3.1ms | ActiveRecord: 4.3ms)
+  [1m[36mListing Load (114.2ms)[0m  [1mSELECT "listings".* FROM "listings"[0m
+
+
+Started POST "/search_listing" for 127.0.0.1 at 2017-11-24 14:06:00 +0530
+Processing by InventoryManagementController#search_listing as */*
+  Parameters: {"user_id"=>"2", "search_listing"=>{"search_box"=>"1", "make"=>"make_0"}}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mListing Load (1.5ms)[0m  SELECT "listings".* FROM "listings" WHERE "listings"."id" = $1  [["id", 1]]
+  [1m[36mListing Load (1.8ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE (make = 'make_0')[0m
+Completed 200 OK in 111ms (Views: 3.8ms | ActiveRecord: 19.7ms)
+
+
+Started POST "/search_listing" for 127.0.0.1 at 2017-11-24 14:06:11 +0530
+Processing by InventoryManagementController#search_listing as */*
+  Parameters: {"user_id"=>"2", "search_listing"=>{"search_box"=>"2", "make"=>"make_0"}}
+  [1m[35mUser Load (2.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mListing Load (1.2ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1[0m  [["id", 2]]
+  [1m[35mListing Load (1.4ms)[0m  SELECT "listings".* FROM "listings" WHERE (make = 'make_0')
+Completed 200 OK in 21ms (Views: 2.8ms | ActiveRecord: 5.1ms)
+
+
+Started POST "/search_listing" for 127.0.0.1 at 2017-11-24 14:06:24 +0530
+Processing by InventoryManagementController#search_listing as */*
+  Parameters: {"user_id"=>"2", "search_listing"=>{"search_box"=>"3", "make"=>"make_0"}}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mListing Load (1.2ms)[0m  SELECT "listings".* FROM "listings" WHERE "listings"."id" = $1  [["id", 3]]
+  [1m[36mListing Load (1.2ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE (make = 'make_0')[0m
+Completed 200 OK in 14ms (Views: 2.8ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/search_listing" for 127.0.0.1 at 2017-11-24 14:06:37 +0530
+Processing by InventoryManagementController#search_listing as */*
+  Parameters: {"user_id"=>"2", "search_listing"=>{"search_box"=>"make_1", "make"=>"make_0"}}
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mListing Load (1.5ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE (title LIKE 'make_1' OR make LIKE 'make_1' OR model LIKE 'make_1' OR description LIKE 'make_1')[0m
+  [1m[35mListing Load (1.2ms)[0m  SELECT "listings".* FROM "listings" WHERE (make = 'make_0')
+Completed 200 OK in 19ms (Views: 3.0ms | ActiveRecord: 4.1ms)
+  [1m[35mItemSource Load (44.0ms)[0m  SELECT "item_sources".* FROM "item_sources"
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-24 14:09:57 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"2", "search_item_source"=>{"search_box"=>"make_1", "short_name"=>"test_short_name2"}}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mItemSource Load (2.1ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE (name LIKE 'make_1' OR short_name LIKE 'make_1')
+  [1m[36mItemSource Load (1.0ms)[0m  [1mSELECT "item_sources".* FROM "item_sources" WHERE (short_name = 'test_short_name2')[0m
+Completed 200 OK in 91ms (Views: 2.2ms | ActiveRecord: 14.8ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-24 14:10:05 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"2", "search_item_source"=>{"search_box"=>"4", "short_name"=>"test_short_name2"}}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.1ms)
+
+NoMethodError (undefined method `to_i' for #<MatchData "4" 1:"4">
+Did you mean?  to_s
+               to_a):
+  app/controllers/inventory_management_controller.rb:353:in `search_item_source'
+
+
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.3ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.4ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/lt/.rvm/gems/ruby-2.3.0@erb/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (79.0ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-24 14:10:32 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"2", "search_item_source"=>{"search_box"=>"4", "short_name"=>"test_short_name2"}}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mItemSource Load (0.7ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE "item_sources"."id" = $1  [["id", 4]]
+  [1m[36mItemSource Load (1.2ms)[0m  [1mSELECT "item_sources".* FROM "item_sources" WHERE (short_name = 'test_short_name2')[0m
+Completed 200 OK in 93ms (Views: 2.2ms | ActiveRecord: 17.4ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-24 14:10:48 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"2", "search_item_source"=>{"search_box"=>"5", "short_name"=>"test_short_name2"}}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mItemSource Load (1.2ms)[0m  [1mSELECT "item_sources".* FROM "item_sources" WHERE "item_sources"."id" = $1[0m  [["id", 5]]
+  [1m[35mItemSource Load (1.1ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE (short_name = 'test_short_name2')
+Completed 200 OK in 13ms (Views: 2.2ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/search_listing" for 127.0.0.1 at 2017-11-24 14:11:38 +0530
+Processing by InventoryManagementController#search_listing as */*
+  Parameters: {"user_id"=>"2", "search_listing"=>{"search_box"=>"5"}}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mListing Load (0.9ms)[0m  SELECT "listings".* FROM "listings" WHERE "listings"."id" = $1  [["id", 5]]
+Completed 200 OK in 73ms (Views: 0.7ms | ActiveRecord: 14.7ms)
+
+
+Started POST "/search_listing" for 127.0.0.1 at 2017-11-24 14:11:48 +0530
+Processing by InventoryManagementController#search_listing as */*
+  Parameters: {"user_id"=>"2", "search_listing"=>{"search_box"=>"1"}}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mListing Load (1.0ms)[0m  SELECT "listings".* FROM "listings" WHERE "listings"."id" = $1  [["id", 1]]
+Completed 200 OK in 31ms (Views: 2.5ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/search_listing" for 127.0.0.1 at 2017-11-24 14:12:00 +0530
+Processing by InventoryManagementController#search_listing as */*
+  Parameters: {"user_id"=>"2", "search_listing"=>{"search_box"=>"model_1"}}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mListing Load (1.6ms)[0m  SELECT "listings".* FROM "listings" WHERE (title LIKE 'model_1' OR make LIKE 'model_1' OR model LIKE 'model_1' OR description LIKE 'model_1')
+Completed 200 OK in 11ms (Views: 1.7ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-24 14:12:44 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"2", "search_item_source"=>{"search_box"=>"1"}}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mItemSource Load (1.2ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE "item_sources"."id" = $1  [["id", 1]]
+Completed 200 OK in 73ms (Views: 0.9ms | ActiveRecord: 11.9ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-24 14:12:49 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"2", "search_item_source"=>{"search_box"=>"5"}}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mItemSource Load (1.3ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE "item_sources"."id" = $1  [["id", 5]]
+Completed 200 OK in 28ms (Views: 2.4ms | ActiveRecord: 5.1ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-24 14:12:53 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"2", "search_item_source"=>{"search_box"=>"5", "short_name"=>"test_short_name2"}}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mItemSource Load (1.3ms)[0m  SELECT "item_sources".* FROM "item_sources" WHERE "item_sources"."id" = $1  [["id", 5]]
+  [1m[36mItemSource Load (1.1ms)[0m  [1mSELECT "item_sources".* FROM "item_sources" WHERE (short_name = 'test_short_name2')[0m
+Completed 200 OK in 14ms (Views: 2.1ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/search_item_source" for 127.0.0.1 at 2017-11-24 14:12:56 +0530
+Processing by InventoryManagementController#search_item_source as */*
+  Parameters: {"user_id"=>"2", "search_item_source"=>{"short_name"=>"test_short_name2"}}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mItemSource Load (1.2ms)[0m  [1mSELECT "item_sources".* FROM "item_sources" WHERE (short_name = 'test_short_name2')[0m
+Completed 200 OK in 10ms (Views: 1.8ms | ActiveRecord: 2.3ms)

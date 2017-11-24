@@ -93,9 +93,14 @@ class InventoryManagementController < ApplicationController
 			if params[:search_inventory_item].present?
 				search_text = params[:search_inventory_item][:search_box]
 	      if search_text.present?
-	      	(search_text).match(/^(\d)+$/)
-	        search_id = InventoryItem.where(id: search_text.to_i)
-			    array_search << search_id
+	      	search = (search_text).match(/^(\d)+$/).to_s
+	      	if search.present?
+	        	search_id = InventoryItem.where(id: search)
+			    	array_search << search_id
+	      	else
+				    search_all = InventoryItem.where("icc LIKE :search OR serial LIKE :search OR make LIKE :search OR model LIKE :search OR location LIKE :search", search: search_text)
+				    array_search << search_all
+	      	end
 			    search_icc = InventoryItem.where('icc = ?',params[:search_inventory_item][:icc]) if params[:search_inventory_item][:icc].present?
 			    array_search << search_icc
 	        search_title = InventoryItem.where('serial = ?',params[:search_inventory_item][:serial]) if params[:search_inventory_item][:serial].present?
@@ -108,8 +113,6 @@ class InventoryManagementController < ApplicationController
 			    total = array_search << search_description
 		    	render :json=> {:status => true,:message => "InventoryItem search list", :search => total.flatten.uniq.reject(&:blank?)}, :status=>200
 	      else
-	        search_all = InventoryItem.where("icc LIKE :search OR serial LIKE :search OR make LIKE :search OR model LIKE :search OR location LIKE :search", search: search_text)
-			    array_search << search_all
 			    search_icc = InventoryItem.where('icc = ?',params[:search_inventory_item][:icc]) if params[:search_inventory_item][:icc].present?
 			    array_search << search_icc
 	        search_title = InventoryItem.where('serial = ?',params[:search_inventory_item][:serial]) if params[:search_inventory_item][:serial].present?
@@ -214,11 +217,16 @@ class InventoryManagementController < ApplicationController
 			@user = User.find_by(id: params[:user_id])
 			array_search = []
 			if params[:search_listing].present?
-				search_text = params[:search_listing][:search_box]
-	      if search_text.present?
-	      	(search_text).match(/^(\d)+$/)
-	        search_id = Listing.where(id: search_text.to_i)
-			    array_search << search_id
+	      if params[:search_listing][:search_box].present?
+					search_text = params[:search_listing][:search_box]
+	      	search = (search_text).match(/^(\d)+$/).to_s
+	      	if search.present?
+	        	search_id = Listing.where(id: search)
+			    	array_search << search_id
+	      	else
+			    	search_all = Listing.where("title LIKE :search OR make LIKE :search OR model LIKE :search OR description LIKE :search", search: search_text)
+			    	array_search << search_all
+	      	end
 	        search_title = Listing.where('title = ?',params[:search_listing][:title]) if params[:search_listing][:title].present?
 			    array_search << search_title
 			    search_make = Listing.where('make = ?',params[:search_listing][:make]) if params[:search_listing][:make].present?
@@ -229,8 +237,6 @@ class InventoryManagementController < ApplicationController
 			    total = array_search << search_description
 		    	render :json=> {:status => true,:message => "Listing search list", :search => total.flatten.uniq.reject(&:blank?)}, :status=>200
 	      else
-	        search_all = Listing.where("title LIKE :search OR make LIKE :search OR model LIKE :search OR description LIKE :search", search: search_text)
-			    array_search << search_all
 	        search_title = Listing.where('title = ?',params[:search_listing][:title]) if params[:search_listing][:title].present?
 			    array_search << search_title
 			    search_make = Listing.where('make = ?',params[:search_listing][:make]) if params[:search_listing][:make].present?
@@ -340,19 +346,22 @@ class InventoryManagementController < ApplicationController
 			@user = User.find_by(id: params[:user_id])
 			array_search = []
 			if params[:search_item_source].present?
-				search_text = params[:search_item_source][:search_box]
-	      if search_text.present?
-	      	(search_text).match(/^(\d)+$/)
-	        search_id = ItemSource.where(id: search_text.to_i)
-			    array_search << search_id
+	      if params[:search_item_source][:search_box].present?
+					search_text = params[:search_item_source][:search_box]
+	      	search = (search_text).match(/^(\d)+$/).to_s
+	      	if search.present?
+		        search_id = ItemSource.where(id: search)
+				    array_search << search_id
+	      	else
+		        search_all = ItemSource.where("name LIKE :search OR short_name LIKE :search", search: search_text)
+				    array_search << search_all
+	      	end
 	        search_name = ItemSource.where('name = ?',params[:search_item_source][:name]) if params[:search_item_source][:name].present?
 			    array_search << search_name
 			    search_short_name = ItemSource.where('short_name = ?',params[:search_item_source][:short_name]) if params[:search_item_source][:short_name].present?
 			    total = array_search << search_short_name
 		    	render :json=> {:status => true,:message => "Item source search list", :search => total.flatten.uniq.reject(&:blank?)}, :status=>200
 	      else
-	        search_all = ItemSource.where("name LIKE :search OR short_name LIKE :search", search: search_text)
-			    array_search << search_all
 	        search_name = ItemSource.where('name = ?',params[:search_item_source][:name]) if params[:search_item_source][:name].present?
 			    array_search << search_name
 			    search_short_name = ItemSource.where('short_name = ?',params[:search_item_source][:short_name]) if params[:search_item_source][:short_name].present?
