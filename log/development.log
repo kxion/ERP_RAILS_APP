@@ -17062,3 +17062,20 @@ WARNING: User#current is nil, are you including SentientController on your Appli
   [1m[36m (22.0ms)[0m  [1mCOMMIT[0m
   [1m[35mUser Load (2.3ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
   [1m[36mUser Load (3.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "employees" ON "employees"."user_id" = "users"."id" WHERE (role IN ('Employee')) AND (employees.sales_user_id = 1 AND employees.is_active = 't')[0m
+  [1m[35mInventoryItem Load (2.2ms)[0m  SELECT  "inventory_items".* FROM "inventory_items"  ORDER BY "inventory_items"."id" DESC LIMIT 1
+  [1m[36mInventoryItem Load (2.0ms)[0m  [1mSELECT  "inventory_items".* FROM "inventory_items"  ORDER BY "inventory_items"."id" DESC LIMIT 1[0m
+  [1m[35mInventoryItem Load (2.0ms)[0m  SELECT  "inventory_items".* FROM "inventory_items"  ORDER BY "inventory_items"."id" DESC LIMIT 1
+  [1m[36m (0.9ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (8.7ms)[0m  UPDATE "inventory_items" SET "icc" = $1, "updated_at" = $2 WHERE "inventory_items"."id" = $3  [["icc", "Sdsfdfs"], ["updated_at", "2017-11-24 10:14:04.709317"], ["id", 11]]
+  [1m[36m (20.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mInventoryItem Load (2.1ms)[0m  SELECT "inventory_items".* FROM "inventory_items" WHERE (icc = 'Sdsfdfs')
+  [1m[36mInventoryItem Load (2.0ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items" WHERE (icc = 'sdsfdfs')[0m
+  [1m[35mInventoryItem Load (71.8ms)[0m  SELECT "inventory_items".* FROM "inventory_items" WHERE (icc LIKE)
+  [1m[36mInventoryItem Load (2.2ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items" WHERE (icc LIKE'sdsfdfs')[0m
+  [1m[35mInventoryItem Load (1.5ms)[0m  SELECT "inventory_items".* FROM "inventory_items" WHERE (icc LIKE 'sdsfdfs')
+  [1m[36mInventoryItem Load (1.9ms)[0m  [1mSELECT "inventory_items".* FROM "inventory_items" WHERE (icc LIKE 'Sdsfdfs')[0m
+  [1m[35mInventoryItem Load (1.9ms)[0m  SELECT "inventory_items".* FROM "inventory_items" WHERE (icc LIKE 'sdsfdfs')
+  [1m[36mUser Load (2.2ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35m (0.9ms)[0m  BEGIN
+  [1m[36mSQL (18.2ms)[0m  [1mUPDATE "users" SET "encrypted_password" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["encrypted_password", "$2a$11$Yy7snhOtF5FAJ1.wQykG.uloThgwFhloMpwBNMDHe1dTiHY0DaUaO"], ["updated_at", "2017-11-24 11:08:25.195779"], ["id", 14]]
+  [1m[35m (24.9ms)[0m  COMMIT

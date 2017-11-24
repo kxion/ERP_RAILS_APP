@@ -20,7 +20,10 @@ class EmployeesController < ApplicationController
     p user = User.new(employee_params)
     p 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'
     p user.employee.sales_user_id = current_user.id
-    if user.save
+    p user.password = params[:password]
+    p user.password_confirmation = params[:password_confirmation]
+    user.save
+    if user.confirm
       p 111111111111111111
       render status: 200, json: { employee_id: user.employee.id}
     else
