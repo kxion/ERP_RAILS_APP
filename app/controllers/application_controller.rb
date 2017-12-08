@@ -1,6 +1,10 @@
 class ApplicationController < ActionController::Base
   respond_to :html, :json
   skip_before_filter :verify_authenticity_token
+
+  code_hide
+  code_hide
+  code_hide
   
   before_filter :set_headers
   # p 'test'
